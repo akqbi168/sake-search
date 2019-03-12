@@ -53,3 +53,33 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+
+# ここから追記 ============================================
+
+# 会員登録
+gem 'devise', "~> 4.6.1"
+
+# デザイン
+gem 'bootstrap-sass', '~> 3.4.1'
+gem 'jquery-rails'
+
+# 画像追加
+gem 'carrierwave', '~> 1.3.1'
+
+# フォームの動的追加
+gem 'cocoon'
+
+# オートコンプリート (rails5でも使える)
+gem 'rails4-autocomplete'
+
+# ページング機能
+gem 'kaminari', '~> 1.1.1'
+
+# レコードの論理削除
+gem 'paranoia'
+
+# コンソール
+gem 'pry-rails'
+gem 'better_errors'
