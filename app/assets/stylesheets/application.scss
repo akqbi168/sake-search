@@ -1,0 +1,49 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+li {
+  list-style: none;
+}
+
+/* devise */
+
+.devise-container {
+  width: 50%;
+  min-width: 400px;
+  margin: 30px auto;
+  padding-bottom: 20px;
+  border: 3px dotted orange;
+  border-radius: 2%;
+  // line-height: 30px;
+}
+
+.devise-box {
+  width: 310px;
+  margin: 0 auto;
+}
+
+.devise-box h2,.devise-box h5,.devise-box .btn {
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.devise-left {
+    float:left;
+}
+
+.devise-right {
+    float:right;
+}
