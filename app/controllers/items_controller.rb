@@ -21,7 +21,10 @@ class ItemsController < ApplicationController
   def destroy
   end
 
-  def result
+  def search
+    @items = Item.search(params[:search])
   end
+
+
 
 end

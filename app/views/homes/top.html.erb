@@ -15,11 +15,21 @@
   </div>
 
   <div class="search" style="border: 1px solid black; height:20vh; width:100%; background-color:rgba(200,200,200,0.7); padding:10vh 0 0 20%">
+    <%= form_tag items_result_path, method: :get do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag '検索', :name => nil %>
+    <% end %>
 
-      <%=form_tag items_result_path, method: :get do %>
-            <%=text_field_tag :search, params[:search] ,placeholder: "お酒の銘柄で検索" %>
-            <%= submit_tag "検索" , class: "btn" %> 
+    <ul><% @items.each do |item| %>
+      <li>
+        <%= link_to item.name, item %>
+        <%= item.created_at %>
+        <%= item.introduction %>
+      </li>
+        <%#= link_to "編集", edit_item_path(item) %>
+        <%= link_to "削除", item, method: :delete %>
       <% end %>
+    </ul>
 
   </div>
 
