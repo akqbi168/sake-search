@@ -28,6 +28,11 @@ class ItemsController < ApplicationController
   def destroy
   end
 
+  def result
+
+    @items = Item.search(params[:search])
+  end
+
   def search
     @items = Item.search(params[:search])
   end

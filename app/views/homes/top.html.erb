@@ -17,7 +17,7 @@
   <div class="search" style="border: 1px solid black; height:20vh; width:100%; background-color:rgba(200,200,200,0.7); padding:10vh 0 0 20%">
     <%= form_tag items_result_path, method: :get do %>
       <%= text_field_tag :search %>
-      <%= submit_tag '検索', :name => nil %>
+      <%= submit_tag '検索' %>
     <% end %>
 
     <ul><% @items.each do |item| %>
