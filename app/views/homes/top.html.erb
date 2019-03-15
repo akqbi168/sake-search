@@ -1,34 +1,33 @@
 <div class="top-background-image">
 
-  <header style="height:60px; background-color:#AAA">
+  <header style="height:60px; background-color: #EEE">
 
   ここヘッダー
 
   </header>
 
-  <div class="blank-up" style="height:30vh; width:100%; opacity:0.5 ; background-color:#CCC">
+  <div class="blank-up" style="height:30vh; width:100%; opacity:0; background-color:#EEE">
     
   </div>
 
-  <div class="title" style="height:20vh; width:100%; background-color:blue">
-    甘さと旨みの、その先へ。
+  <div class="title" style="height:20vh; width:100%; background-color:rgba(200,200,200,0.7); padding-left:20%; font-size: 50px; line-height: 20vh">
+    <strong>甘さと旨みの、その先へ。</strong>
   </div>
 
-  <div class="search" style="height:20vh; width:100%; background-color:green">
-    ここに検索入ります
+  <div class="search" style="border: 1px solid black; height:20vh; width:100%; background-color:rgba(200,200,200,0.7); padding:10vh 0 0 20%">
 
-      <%=form_tag about_path, method: :get do %>
+      <%=form_tag items_result_path, method: :get do %>
             <%=text_field_tag :search, params[:search] ,placeholder: "お酒の銘柄で検索" %>
-            <%= submit_tag "検索" , class: "btn" %>
+            <%= submit_tag "検索" , class: "btn" %> 
       <% end %>
 
   </div>
 
-  <div class="blank-low" style="height:calc(30vh - 100px); opacity:0.5; width:100%; background-color:#EEE">
+  <div class="blank-low" style="height:calc(30vh - 100px); opacity:0; width:100%; background-color:#EEE">
     
   </div>
 
-  <footer style="height:40px">
+  <footer style="height:40px; background-color:#EEE">
   </footer>
 
 </div>

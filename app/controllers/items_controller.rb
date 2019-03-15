@@ -21,4 +21,7 @@ class ItemsController < ApplicationController
   def destroy
   end
 
+  def result
+  end
+
 end
