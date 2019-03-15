@@ -28,6 +28,9 @@ class ItemsController < ApplicationController
   def destroy
   end
 
+  def result
+  end
+
   private
 
     def item_params

@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :create, :show, :edit, :update, :destroy]
   resources :items
 
+  get 'items/result'
+
+  root 'homes#top'
+  get 'about', to: 'homes#about'
+
 end
