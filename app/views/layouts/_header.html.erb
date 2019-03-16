@@ -1,0 +1,30 @@
+<div class="navbar">
+  <div class="header-left">
+    <p>さけサーチ</p>
+  </div>
+  <div class="header-center">
+    EN
+  </div>
+  <div class="header-right">
+    <% if current_user %>
+      
+    <% else %>
+      
+
+      <div class="dropdown">
+        <!-- <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> -->
+        <span class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="glyphicon glyphicon-log-in"></span>
+        </span>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" role="menu">
+          <span class="dropdown-item"><%= link_to '新規登録', new_user_registration_path %></span><br>
+          <span class="dropdown-item"><%= link_to 'ログイン', new_user_session_path %></span>
+        </div>
+      </div>
+
+
+
+      
+    <% end %>
+  </div>
+</div>
