@@ -3,6 +3,12 @@ class Item < ApplicationRecord
   # 画像アップロード用
     mount_uploader :image, ImageUploader
 
+  # 検索機能
+    def self.search(search)
+      return Item.all unless search
+      Item.where(['name LIKE ?', "%#{search}%"])
+    end
+
   # enum for category
     enum category_id: {
       '1: 純米大吟醸':1,

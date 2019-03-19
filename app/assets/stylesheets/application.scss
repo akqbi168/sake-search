@@ -1,25 +1,105 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import "homes.scss";
 @import "items.scss";
 
 
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 .clearfix::after {
-  content: "";
-  display: block;
   clear: both;
+  content: '';
+  display: block;
 }
+
 li {
   list-style: none;
 }
 
-/* devise */
+a {
+  text-decoration: none;
+}
 
+
+
+// layouts/header
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #eee;
+  opacity: 0.7;
+  font-size: 28px;
+  line-height: 60px;
+  box-shadow: 0 4px 12px rgba(black, 0.1);
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.header-left {
+  position: absolute;
+  left: 0;
+  padding-left: 30px;
+}
+
+.header-right {
+  height: 60px;
+  position: absolute;
+  right: 0;
+  padding-right: 30px;
+
+  a:hover {
+    color: #ff8c00;
+    font-weight: bold;
+  }
+}
+
+.dropdown-menu {
+  width: 60px;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: right;
+}
+
+
+
+// layouts/footer
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
+  opacity: 0.7;
+  font-size: 1em;
+  line-height: 40px;
+}
+
+
+
+
+// homes#top
+
+.top-background-image {
+  width: 100vw;
+  height: 100vh;
+  background: image-url('sake2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+// devise
 .devise-container {
   width: 50%;
   min-width: 400px;
@@ -27,7 +107,6 @@ li {
   padding-bottom: 20px;
   border: 3px dotted orange;
   border-radius: 2%;
-  // line-height: 30px;
 }
 
 .devise-box {
@@ -49,4 +128,17 @@ li {
 
 .devise-right {
     float:right;
+}
+
+
+
+// items#new
+
+.items-container {
+  width: 40%;
+  margin: 60px auto;
+}
+
+.title-text {
+  margin: 60px 0;
 }
