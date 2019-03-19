@@ -20,9 +20,16 @@ class StoresController < ApplicationController
   end
 
   def edit
+    @store = Store.find(params[:id])
   end
 
   def update
+    @store = Store.find(params[:id])
+    if @store.save
+      redirect_to root_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
