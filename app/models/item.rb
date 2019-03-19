@@ -3,6 +3,9 @@ class Item < ApplicationRecord
   # バリデーション
     validates :name, presence: true
 
+  # 画像アップロード用
+    mount_uploader :image, ImageUploader
+
   # 検索機能
     def self.search(search)
       return Item.all unless search
