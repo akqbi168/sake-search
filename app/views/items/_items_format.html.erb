@@ -30,12 +30,22 @@
       <%= f.text_area :introduction %>
     </div>
 
-    <div class="field">
-      <%= f.label :image, "商品画像の選択*" %><br>
-      <%= image_tag @item.image.thumb.url if @item.image? %>
-      <%= f.file_field :image %>
-      <%= f.hidden_field :image_cache %>
-    </div>
+    <% if action_name == "new" %>
+      <div class="field">
+        <%= f.label :image, "商品画像の選択*" %><br>
+        <%#= image_tag @item.image.thumb.url if @item.image?本当はこちら %>
+        <%= image_tag f.image.to_s if @item.image? %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+      </div>
+    <% else %>
+      <div class="field">
+        <%= f.label :image, "商品画像の選択*" %><br>
+        <%= image_tag f.image.to_s if @item.image? %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+      </div>
+    <% end %>
 
     <% if action_name == "new" %>
       <%= f.submit "商品の作成", class:"" %>
