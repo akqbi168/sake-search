@@ -41,7 +41,7 @@
     <% elsif action_name == "edit" %>
       <div class="field">
         <%= f.label :image, "商品画像の選択*" %><br>
-        <%= image_tag f.image.to_s if @item.image? %>
+        <%= image_tag @item.image.to_s if @item.image? %>
         <%= f.file_field :image %>
         <%= f.hidden_field :image_cache %>
       </div>

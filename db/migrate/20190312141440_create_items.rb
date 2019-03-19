@@ -3,8 +3,8 @@ class CreateItems < ActiveRecord::Migration[5.2]
     create_table :items do |t|
       t.string :image
       t.string :name, null: false
-      t.integer :sake_parameter     # 日本酒度
-      t.integer :acid_parameter     # 酸度
+      t.float :sake_parameter     # 日本酒度
+      t.float :acid_parameter     # 酸度
       t.integer :category_id        # 辛口/甘口など
       t.integer :made_in_id         # 産地
       t.text :introduction
