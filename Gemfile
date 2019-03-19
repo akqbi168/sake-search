@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.3'
+ruby '2.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -66,7 +66,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 
 # 画像追加
-gem 'carrierwave', '~> 1.3.1'
+gem 'carrierwave', '~> 1.3.1'   # 画像アップロード用
+gem 'rmagick'                   # 画像リサイズ用you
 
 # フォームの動的追加
 gem 'cocoon'
