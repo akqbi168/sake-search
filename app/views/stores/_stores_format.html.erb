@@ -1,0 +1,45 @@
+  <%= form_for @store do |f| %>
+
+    <div class="field">
+      <%= f.label :name, "店舗名*" %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address, "住所" %><br>
+      <%= f.text_field :address %>
+    </div>
+
+    <div class="field">
+      <%= f.label :link, "リンクurl" %><br>
+      <%= f.text_field :link %>
+    </div>
+
+    <div class="field">
+      <%= f.label :introduction, "店舗紹介" %><br>
+      <%= f.text_area :introduction %>
+    </div>
+
+    <% if action_name == "new" %>
+      <div class="field">
+        <%= f.label :image, "商品画像の選択*" %><br>
+        <%= image_tag @store.image.image.url if @store.image? %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+      </div>
+    <% elsif action_name == "edit" %>
+      <div class="field">
+        <%= f.label :image, "店舗画像の選択*" %><br>
+        <%= image_tag @store.image.to_s if @store.image? %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+      </div>
+    <% end %>
+
+      <% if action_name == "new" %>
+        <%= f.submit "店舗の作成", class:"btn btn-success", style:"margin-top:20px" %>
+      <% else %>
+        <%= f.submit "店舗の更新", class:"btn btn-warning", style:"margin-top:20px" %>
+      <% end %>
+
+  <% end %>
