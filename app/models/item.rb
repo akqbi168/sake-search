@@ -1,5 +1,8 @@
 class Item < ApplicationRecord
 
+  # バリデーション
+    validates :name, presence: true
+
   # 画像アップロード用
     mount_uploader :image, ImageUploader
 
@@ -8,6 +11,9 @@ class Item < ApplicationRecord
       return Item.all unless search
       Item.where(['name LIKE ?', "%#{search}%"])
     end
+
+  # 画像アップロード用
+    mount_uploader :image, ImageUploader
 
   # enum for category
     enum category_id: {

@@ -15,8 +15,8 @@ ActiveRecord::Schema.define(version: 2019_03_12_155452) do
   create_table "items", force: :cascade do |t|
     t.string "image"
     t.string "name", null: false
-    t.integer "sake_parameter"
-    t.integer "acid_parameter"
+    t.float "sake_parameter"
+    t.float "acid_parameter"
     t.integer "category_id"
     t.integer "made_in_id"
     t.text "introduction"
