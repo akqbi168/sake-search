@@ -1,3 +1,5 @@
+<%= render 'layouts/header' %>
+
 <div class="items-container">
 
   <h1 class="title-text">銘柄追加</h1>
@@ -11,12 +13,12 @@
 
     <div class="field">
       <%= f.label :sake_parameter, "日本酒度" %><br>
-      <%= f.number_field :sake_parameter %>
+      <%= f.number_field :sake_parameter, :step => 0.1 %>
     </div>
 
     <div class="field">
       <%= f.label :acid_parameter, "酸度" %><br>
-      <%= f.number_field :acid_parameter %>
+      <%= f.number_field :acid_parameter, :step => 0.1 %>
     </div>
 
     <div class="field">
@@ -50,3 +52,5 @@
   <% end %>
 
 </div>
+
+<%= render 'layouts/footer' %>
