@@ -174,6 +174,7 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
+    rmagick (3.0.0)
     ruby_dep (1.5.0)
     sass (3.7.3)
       sass-listen (~> 4.0.0)
@@ -241,6 +242,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.2)
   rails4-autocomplete
+  rmagick
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
