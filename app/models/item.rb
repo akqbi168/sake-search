@@ -10,7 +10,7 @@ class Item < ApplicationRecord
     end
 
   # 画像アップロード用
-    mount_uploader :image, ImageUploader
+    mount_uploader :item_image, ItemImageUploader
 
   # enum for category
     enum category_id: {
