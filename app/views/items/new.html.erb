@@ -5,7 +5,7 @@
   <%= form_for @item do |f| %>
 
     <div class="field">
-      <%= f.label :name, "銘柄名" %><br>
+      <%= f.label :name, "銘柄名*" %><br>
       <%= f.text_field :name %>
     </div>
 
@@ -32,6 +32,13 @@
     <div class="field">
       <%= f.label :introduction, "紹介文" %><br>
       <%= f.text_area :introduction %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image, "商品画像の選択*" %><br>
+      <%= image_tag @item.image.thumb.url if @item.image? %>
+      <%= f.file_field :image %>
+      <%= f.hidden_field :image_cache %>
     </div>
 
   <% if action_name == "new" %>
