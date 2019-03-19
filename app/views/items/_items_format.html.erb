@@ -1,0 +1,56 @@
+  <%= form_for @item do |f| %>
+
+    <div class="field">
+      <%= f.label :name, "銘柄名*" %><br>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :sake_parameter, "日本酒度" %><br>
+      <%= f.number_field :sake_parameter, :step => 0.1 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :acid_parameter, "酸度" %><br>
+      <%= f.number_field :acid_parameter, :step => 0.1 %>
+    </div>
+
+    <div class="field">
+      <%= f.label :category_id, "カテゴリー選択" %><br>
+      <%= f.select :category_id, Item.category_ids.keys, { prompt: '選択してください' } %>
+    </div>
+
+    <div class="field">
+      <%= f.label :made_in_id, "産地" %><br>
+      <%= f.select :made_in_id, Item.made_in_ids.keys, { prompt: '選択してください' } %>
+    </div>
+
+    <div class="field">
+      <%= f.label :introduction, "紹介文" %><br>
+      <%= f.text_area :introduction %>
+    </div>
+
+    <% if action_name == "new" %>
+      <div class="field">
+        <%= f.label :image, "商品画像の選択*" %><br>
+        <%= image_tag @item.image.image.url if @item.image? %>
+        <%#= image_tag f.image.to_s if @item.image? %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+      </div>
+    <% elsif action_name == "edit" %>
+      <div class="field">
+        <%= f.label :image, "商品画像の選択*" %><br>
+        <%= image_tag @item.image.to_s if @item.image? %>
+        <%= f.file_field :image %>
+        <%= f.hidden_field :image_cache %>
+      </div>
+    <% end %>
+
+    <% if action_name == "new" %>
+      <%= f.submit "商品の作成", class:"" %>
+    <% else %>
+      <%= f.submit "商品の更新", class:"" %>
+    <% end %>
+
+  <% end %>

@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  get 'stores/index'
-  get 'stores/new'
-  get 'stores/create'
-  get 'stores/show'
-  get 'stores/edit'
-  get 'stores/update'
-  get 'stores/destroy'
+
+  devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'items/result'
+
+  resources :users, only: [:index, :create, :show, :edit, :update, :destroy]
+  resources :items
+  resources :stores
+
+  root 'homes#top'
+  get 'about', to: 'homes#about'
+
 end
