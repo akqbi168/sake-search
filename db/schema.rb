@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_03_12_155452) do
   end
 
   create_table "stores", force: :cascade do |t|
-    t.text "image_id"
+    t.text "image"
     t.string "name"
     t.text "introduction"
     t.string "address"
