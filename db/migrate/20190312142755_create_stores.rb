@@ -1,7 +1,7 @@
 class CreateStores < ActiveRecord::Migration[5.2]
   def change
     create_table :stores do |t|
-      t.text :image_id
+      t.text :image
       t.string :name
       t.text :introduction
       t.string :address
