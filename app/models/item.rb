@@ -1,22 +1,13 @@
 class Item < ApplicationRecord
 
-# 検索機能
-  def self.search(search)
-    return Item.all unless search
-    Item.where(['name LIKE ?', "%#{search}%"])
-  end
+  # バリデーション
+    validates :name, presence: true
 
-# enum for category
-  enum category_id: {
-    '1: 純米大吟醸':1,
-    '2: 純米吟醸':2,
-    '3: 純米':3,
-    '4: 大吟醸':4,
-    '5: 吟醸':5,
-    '6: 本醸造':6,
-    '7: スパークリング':7,
-    '8: 普通酒':8
-  }
+  # 検索機能
+    def self.search(search)
+      return Item.all unless search
+      Item.where(['name LIKE ?', "%#{search}%"])
+    end
 
   # 画像アップロード用
     mount_uploader :image, ImageUploader
