@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(version: 2019_03_12_155452) do
 
   create_table "items", force: :cascade do |t|
-    t.text "image_id"
-    t.string "name"
-    t.text "introduction"
-    t.integer "sake_parameter"
-    t.integer "acid_parameter"
+    t.string "image"
+    t.string "name", null: false
+    t.float "sake_parameter"
+    t.float "acid_parameter"
     t.integer "category_id"
     t.integer "made_in_id"
+    t.text "introduction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
