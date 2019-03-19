@@ -12,9 +12,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   # process :convert => 'jpg'
 
   # サムネイルの生成
-  # version :thumb do
-  #   process :resize_to_limit => [300, 300]
-  # end
+  version :thumb do
+    process :resize_to_limit => [100, 100]
+  end
 
   # ファイルの形式指定
   # def extension_white_list
