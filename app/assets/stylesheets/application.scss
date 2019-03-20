@@ -116,7 +116,8 @@ a {
 }
 
 .devise-box h2,.devise-box h5,.devise-box .btn {
-  margin-bottom: 20px;
+  margin-bottom: 100px;
+  border: 50px solid red;
 }
 
 .field {
@@ -124,11 +125,11 @@ a {
 }
 
 .devise-left {
-    float:left;
+  float: left;
 }
 
 .devise-right {
-    float:right;
+  float: right;
 }
 
 
@@ -155,4 +156,55 @@ a {
 
 .title-text {
   margin: 60px 0;
+}
+
+
+
+// items#show
+
+.items-show-container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.sake-visual-area {
+  width: 25%;
+  float: left;
+  // background-color: blue;
+}
+
+.sake-visual {
+  width: 100%;
+  background-size: cover;
+}
+
+.items-show-body {
+  width: 75%;
+  padding: 0 20px 0;
+  float: right;
+  // background-color: pink;
+}
+
+.items-title-name {
+  font-size: 5vmax;
+}
+
+.items-title-made_in {
+  font-size: 3vmax;
+}
+
+.category-text,
+.tag-text {
+  margin: 10px 0;
+}
+
+.parameter-text {
+  font-size: 1.2vmax;
+  margin-right: 20px;
+  line-height: 30px;
+}
+
+.introduction-text {
+  margin-top: 10px;
+  border: 1px dotted #ccc;
 }

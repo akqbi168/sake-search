@@ -1,0 +1,41 @@
+<%= render 'layouts/header' %>
+
+<div class="items-show-container clearfix">
+
+  <div class="sake-visual-area">
+    <%= image_tag @item.image.to_s, class: 'sake-visual' %>
+  </div>
+
+  <div class="items-show-body">
+    <span class="items-title-name">
+      <%= @item.name %>
+    </span>
+    <span class="items-title-made_in">
+      (<%= @item.made_in_id.slice(4..9) %>)
+    </span><br>
+
+    <h5 class="category-text btn btn-xs btn-primary">
+      <%= @item.category_id.slice(3..9) %>
+    </h5>
+
+    <h5 class="tag-text btn btn-xs btn-success">
+      タグ1
+    </h5>
+
+    <h5 class="tag-text btn btn-xs btn-success">
+      タグ2
+    </h5>
+
+    <p class="parameter-text">
+      日本酒度 <strong><%= @item.sake_parameter %></strong>　
+      酸度 <strong><%= @item.acid_parameter %></strong>
+    </p>
+
+    <div class="introduction-text">
+      <%= @item.introduction %>
+    </div>
+  </div>
+
+</div>
+
+<%= render 'layouts/footer' %>
