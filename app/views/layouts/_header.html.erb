@@ -9,9 +9,29 @@
 
   <!-- header 中央 -->
   <div class="header-center">
+
     <% if controller.action_name == "top" %>
       EN
+
+    <% elsif controller.controller_name == "items" %>
+      <% if controller.action_name == "new" %>
+        + 銘柄追加 +
+      <% elsif controller.action_name == "edit" %>
+        + 銘柄編集 +
+      <% elsif controller.action_name == "show" %>
+        + 銘柄詳細 +
+      <% end %>
+
+    <% elsif controller.controller_name == "stores" %>
+      <% if controller.action_name == "new" %>
+        + 店舗追加 +
+      <% elsif controller.action_name == "edit" %>
+        + 店舗編集 +
+      <% elsif controller.action_name == "show" %>
+        + 店舗詳細 +
+      <% end %>
     <% end %>
+
   </div>
 
   <!-- header 右側 -->
