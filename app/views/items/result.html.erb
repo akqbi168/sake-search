@@ -1,6 +1,6 @@
 <%= render 'layouts/header' %>
 
-<div class="result-search">
+<div class="result-search" style="display:none">
   <%= form_tag items_result_path, method: :get do %>
     <%= text_field_tag :search %>
     <%= submit_tag 'Go', class: "btn-xs" %>
@@ -26,6 +26,7 @@
         </div>
 
       <% end %>
+    </div>
 
 
 
