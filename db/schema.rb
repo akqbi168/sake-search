@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2019_03_21_052014) do
     t.float "sake_parameter"
     t.float "acid_parameter"
     t.integer "category_id"
-    t.integer "tag_id"
     t.integer "made_in_id"
     t.text "introduction"
     t.datetime "created_at", null: false
@@ -26,8 +25,8 @@ ActiveRecord::Schema.define(version: 2019_03_21_052014) do
   end
 
   create_table "items_tags", id: false, force: :cascade do |t|
-    t.integer "item_id", null: false
-    t.integer "tag_id", null: false
+    t.integer "item_id"
+    t.integer "tag_id"
     t.index ["item_id"], name: "index_items_tags_on_item_id"
     t.index ["tag_id"], name: "index_items_tags_on_tag_id"
   end
