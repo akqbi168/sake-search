@@ -1,0 +1,12 @@
+<%= form_for @tag do |f| %>
+  <div class="field">
+    <%= f.label :name, "タグ名の追加" %><br>
+    <%= f.text_field :name, class:"", placeholder:"" %>
+    <%= f.submit 'タグ追加', class:"btn btn-default" %>
+  </div>
+
+      <% Tag.all.each do |tag| %>
+        <%= tag.name %>
+      <% end %>
+
+<% end %>

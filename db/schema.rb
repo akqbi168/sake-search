@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_03_21_052014) do
     t.float "sake_parameter"
     t.float "acid_parameter"
     t.integer "category_id"
+    t.integer "tag_id"
     t.integer "made_in_id"
     t.text "introduction"
     t.datetime "created_at", null: false

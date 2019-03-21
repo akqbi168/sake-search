@@ -145,13 +145,31 @@ a {
 // items#new
 
 .items-container {
-  width: 40%;
+  width: 80%;
   margin: 60px auto;
+
+  h1 {
+    margin-bottom: 40px;
+  }
 }
 
-.title-text {
-  margin: 60px 0;
+.items-wrapper {
+  width: 50%;
+  padding: 0 60px;
+  float: left;
+  background-color: orange;
 }
+
+.tags-wrapper {
+  width: 42%;
+  margin: 2%;
+  padding: 0 30px;
+  border: 2px dotted black;
+  float: left;
+  // background-color: yellow;
+}
+
+
 
 
 

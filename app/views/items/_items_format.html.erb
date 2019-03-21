@@ -21,6 +21,18 @@
     </div>
 
     <div class="field">
+
+      <%= f.label :tag_id, "タグ選択" %><br>
+      <%# @tags.each do |tag| %>
+
+        <%#= f.check_box.tag.name %>
+        <%#= f.check_box :tag_id, {multiple: true}, nil %>
+        <%#= f.tag_id.name %>
+
+      <%# end %>
+    </div>
+
+    <div class="field">
       <%= f.label :made_in_id, "産地" %><br>
       <%= f.select :made_in_id, Item.made_in_ids.keys, { prompt: '選択してください' } %>
     </div>
@@ -34,7 +46,6 @@
       <div class="field">
         <%= f.label :image, "商品画像の選択*" %><br>
         <%= image_tag @item.image.image.url if @item.image? %>
-        <%#= image_tag f.image.to_s if @item.image? %>
         <%= f.file_field :image %>
         <%= f.hidden_field :image_cache %>
       </div>

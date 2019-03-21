@@ -5,6 +5,8 @@ class ItemsController < ApplicationController
 
   def new
     @item = Item.new
+    @tag = Tag.new
+    @tags = Tag.all
   end
 
   def create
