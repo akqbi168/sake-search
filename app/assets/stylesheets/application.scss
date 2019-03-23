@@ -23,6 +23,11 @@ li {
   list-style: none;
 }
 
+a,
+a:hover {
+  text-decoration: none;
+}
+
 
 
 // layouts/header
@@ -106,37 +111,46 @@ li {
   position: relative;
 }
 
-.slogan-area {
+.top-container {
   width: 70vw;
-  height: auto;
   margin: 20vh auto 0;
 
-  h1 {
-    color: #444;
-    font-size: 50px;
-    font-weight: bold;
+  .slogan-area {
+    h1 {
+      color: #444;
+      font-size: 50px;
+      font-weight: bold;
+    }
   }
-}
 
-.tops-search-area {
-  width: 70vw;
-  height: auto;
-  margin: 10vh auto 0;
-}
+  .tops-search-area {
+    margin-top: 10vh;
+    font-size: 30px;
+    line-height: 50px;
+  }
 
-.tops-search-box {
-  width: 50vh;
-  display: inline;
-  font-size: 30px;
-  line-height: 50px;
-  padding-left: 20px;
-}
+  .tops-search-box {
+    width: 420px;
+    padding-left: 20px;
+  }
 
-.tops-submit-tag {
-  display: inline;
-  font-size: 30px;
-  line-height: 50px;
-  padding: 0 10px;
+  .tops-submit-tag {
+    padding: 0 10px;
+  }
+
+  .tops-search-details {
+    margin: 1vh 20px;
+
+    a {
+      color: #444;
+      // background-color: #999;
+      // border-radius: 5%;
+    }
+    a:hover {
+      background-color: #eee;
+
+    }
+  }
 }
 
 

@@ -2,15 +2,22 @@
 
   <%= render 'layouts/header' %>
 
-  <div class="slogan-area">
-    <h1>人生に、もっと日本酒を。</h1>
-  </div>
+  <div class="top-container">
 
-  <div class="tops-search-area">
-    <%= form_tag items_result_path, method: :get do %>
-      <%= text_field_tag :search, '' ,{ :placeholder => '銘柄を入力', :class => 'tops-search-box' } %>
-      <%= submit_tag '検索',:class => 'tops-submit-tag' %>
-    <% end %>
+    <div class="slogan-area">
+      <h1>人生に、もっと日本酒を。</h1>
+    </div>
+
+    <div class="tops-search-area">
+      <%= form_tag items_result_path, method: :get do %>
+        <%= text_field_tag :search, '' ,{ :placeholder => '銘柄を入力', :class => 'tops-search-box' } %>
+        <%= submit_tag '検索',:class => 'tops-submit-tag' %>
+      <% end %>
+    </div>
+
+    <div class="tops-search-details">
+      <%= link_to '＋ 詳細検索はこちら ＋', items_result_path %>
+    </div>
 
   </div>
 
