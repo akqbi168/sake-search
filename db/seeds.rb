@@ -19,7 +19,7 @@ Item.create!(
   sake_parameter: 4.0,
   acid_parameter: 1.5,
   category_id: "3: 特別純米酒",
-  tag: "2",
+  tag: "甘口",
   made_in_id: "03: 岩手県",
   introduction: "フレッシュで飲みごたえのある味わいです。南部美人を飲んだことのある方もない方も、昨年の生酒を飲んだ方も「今年の」特別純米を飲み比べてみてください。"
 )

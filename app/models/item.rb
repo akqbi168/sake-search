@@ -1,10 +1,10 @@
 class Item < ApplicationRecord
 
-  # has_and_belongs_to_many :tags
-  belongs_to :tag
+  has_and_belongs_to_many :tags
+  # belongs_to :tag
 
   # バリデーション
-    validates :name, presence: true
+    # validates :name, presence: true
 
   # 画像アップロード用
     mount_uploader :image, ImageUploader
