@@ -10,7 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Avenir, Corbel, Osaka, sans-serif;
+  font-family: 'Hiragino Kaku Gothic', Avenir, Corbel, Osaka, sans-serif;
 }
 
 .clearfix::after {
@@ -21,10 +21,6 @@
 
 li {
   list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 
@@ -86,12 +82,15 @@ a {
   height: 40px;
   background-color: #eee;
   opacity: 0.7;
-  font-size: 1em;
-  line-height: 40px;
-}
+  position: absolute;
+  bottom: 0;
 
-.footer-text {
-  padding-left: 30px;
+  h6 {
+    font-size: 1em;
+    padding-left: 30px;
+    line-height: 40px;
+    margin: 0;
+  }
 }
 
 
@@ -102,13 +101,49 @@ a {
   width: 100vw;
   height: 100vh;
   background: image-url('sake2.jpg');
-  background-position: center;
+  // background-position: center;
   background-size: cover;
+  position: relative;
+}
+
+.slogan-area {
+  width: 70vw;
+  height: auto;
+  margin: 20vh auto 0;
+
+  h1 {
+    color: #444;
+    font-size: 50px;
+    font-weight: bold;
+  }
+}
+
+.tops-search-area {
+  width: 70vw;
+  height: auto;
+  margin: 10vh auto 0;
+}
+
+.tops-search-box {
+  width: 50vh;
+  display: inline;
+  font-size: 30px;
+  line-height: 50px;
+  padding-left: 20px;
+}
+
+.tops-submit-tag {
+  display: inline;
+  font-size: 30px;
+  line-height: 50px;
+  padding: 0 10px;
 }
 
 
 
+
 // devise
+
 .devise-container {
   width: 50%;
   min-width: 400px;
