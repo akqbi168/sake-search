@@ -41,7 +41,6 @@ class ItemsController < ApplicationController
   end
 
   def result
-
     @items = Item.search(params[:search])
   end
 
