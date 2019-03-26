@@ -25,6 +25,7 @@ li {
 
 a,
 a:hover {
+  color: #222;
   text-decoration: none;
 }
 
@@ -285,23 +286,47 @@ footer {
 // items#result
 .result-search {
   margin: 0 auto;
-  margin-left: auto;
 }
 
 .items-result-container {
-  width: 90vw;
+  width: 80vw;
   margin: 0 auto;
   padding: 30px 0;
 }
 
 .result-title-text {
+  margin-bottom: 30px;
+}
 
+.result-row {
+  margin-bottom: 30px;
 }
 
 .result-visual-area {
+  float: left;
+  width: 140px;
 
+  .white-mask {
+    width: 160px;
+    height: 160px;
+    background: rgba(0,255,255,1);
+    border-radius: 50%;
+
+    .result-visual-content {
+      height: 160px;
+      background-color: #eee;
+      border-radius: 50%;
+    }
+  }
 }
 
-.result-visual {
-  height: 100px;
+.result-body-area {
+  float: left;
+  width: calc(100% - 140px);
+
+  a:hover {
+    color: orange;
+  }
 }
+
+

@@ -7,26 +7,31 @@
   <% end %>
 </div>
 
-
 <div class="items-result-container">
 
-  <h1 class="result-title-text">検索結果一覧</h1>
-    <div class="items-result">
-      <% @items.each do |item| %>
+  <h2 class="result-title-text">検索結果一覧</h2>
+    <% @items.each do |item| %>
+
+      <div class="result-row clearfix">
         <div class="result-visual-area">
-          <%= link_to item_path(item) do %>
-            <%= image_tag item.image.to_s, class: "result-visual" %>
-          <% end %>
+          <div class="white-mask">
+            <%= link_to item_path(item) do %>
+              <%= image_tag item.image.to_s, class: "result-visual-content" %>
+            <% end %>
+          </div>
         </div>
 
         <div class="result-body-area">
-          <%= item.name %><br>
-          <%= item.introduction %>
-
+          <%= link_to item_path(item) do %>
+            <h3><%= item.name %></h3>
+          <% end %>
+            <p>[<%= item.category_id.slice(3..9) %>]<br>
+            <%= item.introduction %></p>
         </div>
 
-      <% end %>
-    </div>
+      </div>
+    <% end %>
+
 
 
 
