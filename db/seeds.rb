@@ -23,6 +23,26 @@ Item.create!(
   made_in_id: "03: 岩手県",
   introduction: "フレッシュで飲みごたえのある味わいです。南部美人を飲んだことのある方もない方も、昨年の生酒を飲んだ方も「今年の」特別純米を飲み比べてみてください。"
 )
+Item.create!(
+  image: "dassai23%.png",
+  name: "獺祭 磨き三割九分",
+  sake_parameter: "不明",
+  acid_parameter: "不明",
+  category_id: "1: 純米大吟醸",
+  tag: "フルーティー",
+  made_in_id: "35: 山口県",
+  introduction: "華やかな上立ち香と口に含んだときに見せる蜂蜜のようなきれいな甘み。飲み込んだ後の長い余韻。これぞ純米大吟醸。"
+)
+Item.create!(
+  image: "denshu_tokujun.jpg",
+  name: "田酒",
+  sake_parameter: "0.0",
+  acid_parameter: "1.5",
+  category_id: "3: 特別純米酒",
+  tag: "甘め",
+  made_in_id: "02: 青森県",
+  introduction: "米の旨みが生きた飲み飽きしないスッキリした味わい、非常に人気のある銘酒です。"
+)
 
 
 Store.create!(
