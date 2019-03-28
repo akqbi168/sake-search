@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.8'
+ruby '2.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
@@ -86,7 +86,7 @@ gem 'paranoia'
 gem 'pry-rails'
 gem 'better_errors'
 
-# AWS ec2 デプロイ用追加tuika
+# AWS ec2 デプロイ用追加
 gem 'json'
-gem 'mysql2'
+# gem 'mysql2'
 gem 'listen', '>= 3.0.5', '< 3.2'
