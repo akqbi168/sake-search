@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'items/result'
 
   resources :users, only: [:index, :create, :show, :edit, :update, :destroy]
-  resources :items
+  resources :items, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :stores
   resources :tags, only: [:create, :destroy]
 
