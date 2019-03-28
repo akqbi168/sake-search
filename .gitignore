@@ -35,3 +35,4 @@
 
 # Ignore vendor/bundle
 /vendor/*
+!/vendor/.keep
