@@ -27,6 +27,7 @@ a,
 a:hover {
   color: #222;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 
@@ -295,7 +296,7 @@ footer {
 }
 
 .result-title-text {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .result-row {
@@ -304,28 +305,45 @@ footer {
 
 .result-visual-area {
   float: left;
-  width: 140px;
+  width: 155px;
 
   .white-mask {
     width: 160px;
     height: 160px;
-    background: rgba(0,255,255,1);
+    background: rgba(255,255,255,0);
     border-radius: 50%;
+    position: relative;
 
     .result-visual-content {
       height: 160px;
-      background-color: #eee;
+      position: absolute;
+      // background-color: #eee;
+      background: linear-gradient(to bottom, #fff, #ddd);
       border-radius: 50%;
+      opacity: 0.4;
+      transition: 0.3s;
+    }
+    .result-visual-content:hover {
+      opacity: 1;
+      transition: 0.3s;
     }
   }
 }
 
 .result-body-area {
   float: left;
-  width: calc(100% - 140px);
+  width: calc(100% - 155px);
 
-  a:hover {
+  .result-items-name {
+    height: 30px;
+    // line-height: 30px;
+    transition: 0.3s;
+  }
+
+  .result-items-name:hover {
     color: orange;
+    font-size: 2em;
+    transition: 0.3s;
   }
 }
 
