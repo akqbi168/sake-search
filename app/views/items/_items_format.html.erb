@@ -21,15 +21,10 @@
     </div>
 
     <div class="field">
-
-      <%= f.label :tag_id, "タグ選択" %><br>
-      <%# @tags.each do |tag| %>
-
-        <%#= f.check_box.tag.name %>
-        <%#= f.check_box :tag_id, {multiple: true}, nil %>
-        <%#= f.tag_id.name %>
-
-      <%# end %>
+      <%= f.label :tag_ids, 'タグ選択' %><br>
+      <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |t| %>
+        <%= t.check_box + t.label %>
+      <% end %>
     </div>
 
     <div class="field">
@@ -56,7 +51,7 @@
       <% end %>
     </div>
 
-    <div class="field">
+    <div class="actions">
       <% if action_name == "new" %>
         <%= f.submit "商品の作成", class:"" %>
       <% else %>

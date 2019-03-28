@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
     @item = Item.new
     @tag = Tag.new
     @tags = Tag.all
+    @items = Item.all
   end
 
   def create
@@ -51,7 +52,7 @@ class ItemsController < ApplicationController
   private
 
     def item_params
-      params.require(:item).permit(:image, :name, :sake_parameter, :acid_parameter, :category_id, :tag_id, :made_in_id, :introduction, :image_cache)
+      params.require(:item).permit(:image, :name, :sake_parameter, :acid_parameter, :category_id, :made_in_id, :introduction, :image_cache, tag_ids: [])
     end
 
 end

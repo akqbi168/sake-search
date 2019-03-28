@@ -1,7 +1,6 @@
 class Item < ApplicationRecord
 
   has_and_belongs_to_many :tags
-  # belongs_to :tag
 
   # バリデーション
     # validates :name, presence: true
