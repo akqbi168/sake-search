@@ -234,50 +234,49 @@ footer {
 // items#show
 
 .items-show-container {
-  width: 90vw;
-  margin: 0 auto;
+  width: 80vw;
+  margin: 60px auto;
 }
 
 .sake-visual-area {
   width: 25%;
   float: left;
-  // background-color: blue;
-}
 
-.sake-visual {
-  width: 100%;
-  background-size: cover;
+  .sake-visual {
+    width: 100%;
+    background-size: cover;
+  }
 }
 
 .items-show-body {
   width: 75%;
-  padding: 0 20px 0;
+  padding-left: 5%;
+  font-size: 1.3vmax;
   float: right;
-  // background-color: pink;
-}
 
-.items-title-name {
-  font-size: 5vmax;
-}
+  .items-title-name {
+    font-size: 5vmax;
+  }
 
-.items-title-made_in {
-  font-size: 3vmax;
-}
+  .items-title-made_in {
+    font-size: 3.5vmax;
+  }
 
-.category-text,
-.tag-text {
-  margin: 10px 0;
-}
+  .category-text,
+  .tag-text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
 
-.parameter-text {
-  font-size: 1.2vmax;
-  margin-right: 20px;
-  line-height: 30px;
-}
+  .parameter-text {
+    margin-right: 20px;
+    line-height: 30px;
+  }
 
-.introduction-text {
-  margin-top: 10px;
-  border: 1px dotted #ccc;
+  .introduction-text {
+    margin-top: 10px;
+  }
+
 }
 
 

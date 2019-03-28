@@ -12,11 +12,9 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    # binding.pry
     if @item.save
       redirect_to root_path
     else
-      puts @item.errors.full_messages
       render 'new'
     end
   end
@@ -43,7 +41,6 @@ class ItemsController < ApplicationController
 
   def result
     @items = Item.search(params[:search])
-    # @tags = Tag.
   end
 
   def search
