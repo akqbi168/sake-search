@@ -11,7 +11,7 @@
   <div class="header-center">
 
     <% if controller.action_name == "top" %>
-      EN
+      EN - <%= link_to 'logout', destroy_user_session_path, method: :delete %>
 
     <% elsif controller.controller_name == "items" %>
       <% if controller.action_name == "new" %>
