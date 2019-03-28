@@ -25,8 +25,21 @@
           <%= link_to item_path(item) do %>
             <h3 class="result-items-name"><%= item.name %></h3>
           <% end %>
+
+<!-- ここから古い -->
+          <span style="display:none">
             <p>[<%= item.category_id.slice(3..9) %>]<br>
             <%= item.introduction %></p>
+          </span>
+<!-- ここまで -->
+
+            <p>[<%= item.category_id.slice(3..9) %>]</p>
+
+            <% item.tags.each do |tag| %>
+              <p><%= tag.name %></p>
+            <% end %>
+
+            <p><%= item.introduction %></p>
         </div>
 
       </div>

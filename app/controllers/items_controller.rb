@@ -43,6 +43,7 @@ class ItemsController < ApplicationController
 
   def result
     @items = Item.search(params[:search])
+    # @tags = Tag.
   end
 
   def search
