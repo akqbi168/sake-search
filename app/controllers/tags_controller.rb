@@ -3,6 +3,7 @@ class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     @tag.save
+    flash.now[:success_tag] = 'タグが追加されました!'
     redirect_to new_item_path
   end
 

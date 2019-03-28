@@ -1,0 +1,12 @@
+<%= form_for @tag do |f| %>
+
+  <div class="field">
+    <%= f.label :name, "タグ名*" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.submit 'タグ作成' %>
+  </div>
+  <%= flash[:success_tag] %>
+
+<% end %>
