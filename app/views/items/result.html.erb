@@ -33,11 +33,11 @@
           </span>
 <!-- ここまで -->
 
-            <p>[<%= item.category_id.slice(3..9) %>]</p>
+            <p>[<%= item.category_id.slice(3..9) %>] / 
 
             <% item.tags.each do |tag| %>
-              <p><%= tag.name %></p>
-            <% end %>
+              [<%= tag.name %>]
+            <% end %></p>
 
             <p><%= item.introduction %></p>
         </div>

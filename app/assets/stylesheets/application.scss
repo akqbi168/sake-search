@@ -313,10 +313,12 @@ footer {
     position: relative;
 
     .result-visual-content {
+      max-width: 160px;
       height: 160px;
       position: absolute;
       // background-color: #eee;
       background: linear-gradient(to bottom, #fff, #ddd);
+      background-size: cover;
       border-radius: 50%;
       opacity: 0.4;
       transition: 0.3s;
