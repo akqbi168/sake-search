@@ -16,9 +16,6 @@ class Item < ApplicationRecord
       Item.where(['name LIKE ?', "%#{search}%"])
     end
 
-  # 画像アップロード用
-    mount_uploader :image, ImageUploader
-
   # enum for category
     enum category_id: {
       '1: 純米大吟醸':1,

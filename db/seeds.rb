@@ -8,7 +8,7 @@
 
 # Item を作る
 items = Item.create!([{
-  image: "nanbu-bijin-tokujun.png",
+  image: File.open("./public/images/nanbu-bijin-tokujun.png"),
   name: "南部美人",
   sake_parameter: 4.0,
   acid_parameter: 1.5,
@@ -17,7 +17,7 @@ items = Item.create!([{
   introduction: "フレッシュで飲みごたえのある味わいです。南部美人を飲んだことのある方もない方も、昨年の生酒を飲んだ方も「今年の」特別純米を飲み比べてみてください。"
 }, 
 {
-  image: "dassai23%.png",
+  image: File.open("./public/images/dassai39.png"),
   name: "獺祭 磨き三割九分",
   sake_parameter: "不明",
   acid_parameter: "不明",
@@ -26,7 +26,7 @@ items = Item.create!([{
   introduction: "華やかな上立ち香と口に含んだときに見せる蜂蜜のようなきれいな甘み。飲み込んだ後の長い余韻。これぞ純米大吟醸。"
 }, 
 {
-  image: "denshu_tokujun.jpg",
+  image: File.open("./public/images/denshu_tokujun.jpg"),
   name: "田酒",
   sake_parameter: "0.0",
   acid_parameter: "1.5",
@@ -68,9 +68,9 @@ Tag.create!(name: "夏にピッタリ")
 
 # Store を作る
 Store.create!(
-  image: "スクリーンショット_2019-03-11_18.19.36.png",
-  name: "検閲",
-  introduction: "店舗紹介です。",
-  address: "中央区銀座",
-  link: "http://www.aaa.com",
+  image: File.open("./public/images/kengyo.png"),
+  name: "銀座酒蔵検校",
+  introduction: "昔ながらの「角打ち」が楽しめる、銀座の和酒専門店「銀座酒蔵検校」。普段店頭に並ばない希少酒、伝統を守り続ける良質な日本酒や焼酎、日本のワインを取り揃えております。店内中央にある白木のテーブルにて、様々な和酒を飲みながら、ゆったりとした時間をお過ごしください。",
+  address: "東京都中央区銀座3-8-12 銀座ヤマトビル1階",
+  link: "http://www.kengyo.co.jp",
 )

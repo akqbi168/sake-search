@@ -216,8 +216,6 @@ footer {
 
 
 
-
-
 // stores#new
 
 .stores-container {
@@ -347,3 +345,51 @@ footer {
 }
 
 
+
+// stores#show
+
+.stores-show-container {
+  width: 80vw;
+  margin: 60px auto;
+}
+
+.store-visual-area {
+  width: 25%;
+  float: left;
+
+  .store-visual {
+    width: 100%;
+    background-size: cover;
+  }
+}
+
+.stores-show-body {
+  width: 75%;
+  padding-left: 5%;
+  font-size: 1.3vmax;
+  float: right;
+
+  .stores-title-name {
+    font-size: 5vmax;
+  }
+
+  .stores-show-address {
+    font-size: 2vmax;
+  }
+
+  .category-text,
+  .tag-text {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .parameter-text {
+    margin-right: 20px;
+    line-height: 30px;
+  }
+
+  .introduction-text {
+    margin-top: 10px;
+  }
+
+}
