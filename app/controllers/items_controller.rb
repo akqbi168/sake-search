@@ -12,10 +12,13 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+puts @item.errors.full_messages
     if @item.save
       redirect_to root_path
     else
-      render 'new'
+puts @item.errors.full_messages
+      # render :new
+      redirect_to new_item_path
     end
   end
 
