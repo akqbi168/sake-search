@@ -7,6 +7,7 @@ class CreateStores < ActiveRecord::Migration[5.2]
       t.text :introduction
       t.string :address
       t.string :link
+      t.text :google_iframe
 
       t.timestamps
     end
