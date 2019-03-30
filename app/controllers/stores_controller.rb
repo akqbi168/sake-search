@@ -26,7 +26,7 @@ class StoresController < ApplicationController
 
   def update
     @store = Store.find(params[:id])
-    if @store.save
+    if @store.update(store_params)
       redirect_to root_path
     else
       render 'edit'
