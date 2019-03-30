@@ -393,7 +393,10 @@ footer {
   }
 
   .iframe {
-    // width: 50%;
+    width: 60vw; // calc(80vw * 75% * 100%)
+    max-width: 600px;
+    height: 45vw;
+    max-height: 450px;
   }
 
 }
