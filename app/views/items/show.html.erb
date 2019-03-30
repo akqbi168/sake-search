@@ -32,6 +32,17 @@
       <div class="introduction-text">
         <%= @item.introduction %>
       </div>
+
+      <div class="items-stores-area">
+
+      <% @item.stores.each do |store| %>
+
+        <%= image_tag store.image.to_s, class: "items-stores-visual" %>
+        <%= store.name %>
+      <% end %>
+
+      </div>
+
   </div>
 
 

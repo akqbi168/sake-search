@@ -67,24 +67,48 @@ Tag.create!(name: "夏にピッタリ")
 
 
 # Store を作る
-Store.create!(
+store = Store.new(
   image: File.open("./public/images/kengyo.png"),
   name: "銀座酒蔵検校",
-  introduction: "昔ながらの「角打ち」が楽しめる、銀座の和酒専門店「銀座酒蔵検校」。普段店頭に並ばない希少酒、伝統を守り続ける良質な日本酒や焼酎、日本のワインを取り揃えております。店内中央にある白木のテーブルにて、様々な和酒を飲みながら、ゆったりとした時間をお過ごしください。",
+  introduction: "昔ながらの「角打ち」が楽しめる、銀座の和酒専門店「銀座酒蔵検校」。
+    普段店頭に並ばない希少酒、伝統を守り続ける良質な日本酒や焼酎、日本のワインを取り揃えております。
+    店内中央にある白木のテーブルにて、様々な和酒を飲みながら、ゆったりとした時間をお過ごしください。",
   address: "東京都中央区銀座3-8-12 銀座ヤマトビル1階",
   link: "http://www.kengyo.co.jp"
 )
-Store.create!(
+store.items = [items[0], items[1]]
+store.save
+
+store = Store.new(
   image: File.open("./public/images/sakestand.jpg"),
-  name: "銀座酒蔵検校",
+  name: "SAKESTAND shibuya dogenzakaue",
   introduction: "日本酒をもっと気軽に、もっと楽しく。
-
-そんな想いからSAKESTANDというブランドを創りました。
-
-ノーチャージ、キャッシュオンスタイル。
-
-お気軽にご利用ください。",
+    そんな想いからSAKESTANDというブランドを創りました。
+    ノーチャージ、キャッシュオンスタイル。
+    お気軽にご利用ください。",
   address: "東京都渋谷区道玄坂1-19-8 2F",
   link: "http://sakestand.com/"
 )
+store.items = [items[1], items[2]]
+store.save
+
+# Store.create!(
+#   image: File.open("./public/images/kengyo.png"),
+#   name: "銀座酒蔵検校",
+#   introduction: "昔ながらの「角打ち」が楽しめる、銀座の和酒専門店「銀座酒蔵検校」。
+#     普段店頭に並ばない希少酒、伝統を守り続ける良質な日本酒や焼酎、日本のワインを取り揃えております。
+#     店内中央にある白木のテーブルにて、様々な和酒を飲みながら、ゆったりとした時間をお過ごしください。",
+#   address: "東京都中央区銀座3-8-12 銀座ヤマトビル1階",
+#   link: "http://www.kengyo.co.jp"
+# )
+# Store.create!(
+#   image: File.open("./public/images/sakestand.jpg"),
+#   name: "SAKESTAND shibuya dogenzakaue",
+#   introduction: "日本酒をもっと気軽に、もっと楽しく。
+#     そんな想いからSAKESTANDというブランドを創りました。
+#     ノーチャージ、キャッシュオンスタイル。
+#     お気軽にご利用ください。",
+#   address: "東京都渋谷区道玄坂1-19-8 2F",
+#   link: "http://sakestand.com/"
+# )
 
