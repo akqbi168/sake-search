@@ -75,3 +75,18 @@ Store.create!(
   link: "http://www.kengyo.co.jp",
   google_iframe: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2270957461533!2d139.76515045096806!3d35.67140983802055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be6c9a97f19%3A0x984ec41b26c74232!2z44CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqn77yT5LiB55uu77yY4oiS77yYIOmKgOW6p-ODpOODnuODiOODk-ODqzHpmo4!5e0!3m2!1sja!2sjp!4v1553848286614!5m2!1sja!2sjp",
 )
+Store.create!(
+  image: File.open("./public/images/sakestand.jpg"),
+  name: "銀座酒蔵検校",
+  introduction: "日本酒をもっと気軽に、もっと楽しく。
+
+そんな想いからSAKESTANDというブランドを創りました。
+
+ノーチャージ、キャッシュオンスタイル。
+
+お気軽にご利用ください。",
+  address: "東京都渋谷区道玄坂1-19-8 2F",
+  link: "http://sakestand.com/",
+  google_iframe: "",
+)
+
