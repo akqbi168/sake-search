@@ -2,7 +2,7 @@ class CreateStores < ActiveRecord::Migration[5.2]
   def change
     create_table :stores, :options => 'ENGINE=InnoDB ROW_FORMAT=DYNAMIC' do |t|
       t.text :image
-      t.string :name, null: false
+      t.string :store_name, null: false
       t.text :introduction
       t.string :address
       t.string :link
