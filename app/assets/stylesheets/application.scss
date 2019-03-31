@@ -151,12 +151,10 @@ footer {
 
     a {
       color: #444;
-      // background-color: #999;
-      // border-radius: 5%;
-    }
-    a:hover {
-      background-color: #eee;
 
+      &:hover {
+        background-color: #eee;
+      }
     }
   }
 }
@@ -238,6 +236,12 @@ footer {
 .items-show-container {
   width: 80vw;
   margin: 60px auto;
+
+  .items-stores-title {
+    display: inline-block;
+    margin: 30px 0 20px;
+    border-bottom: 3px solid #999;
+  }
 }
 
 .sake-visual-area {
@@ -283,12 +287,6 @@ footer {
 .items-stores-area {
   margin-top: 10px;
 
-  .items-stores-title {
-    display: inline-block;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #999;
-  }
-
   .items-stores-unit {
     display: inline-block;
     width: 200px;
@@ -299,7 +297,8 @@ footer {
     position: relative;
 
     .items-stores-visual {
-      width: 100%;
+      width: 200px;
+      height: 200px;
     }
 
     .black-mask {
@@ -413,7 +412,8 @@ footer {
   float: left;
 
   .store-visual {
-    width: 100%;
+    width: 20vw;
+    height: 20vw;
     background-size: cover;
   }
 }
@@ -432,15 +432,9 @@ footer {
     font-size: 2vmax;
   }
 
-  .category-text,
-  .tag-text {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-
-  .parameter-text {
-    margin-right: 20px;
-    line-height: 30px;
+  .stores-show-link:hover {
+    display: inline-block;
+    background-color: #aaa;
   }
 
   .introduction-text {
@@ -452,6 +446,11 @@ footer {
     max-width: 600px;
     height: 45vw;
     max-height: 450px;
-  }
+    border: 1px solid #ccc;
+    margin-top: 20px;
 
+    &:hover {
+      box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    }
+  }
 }

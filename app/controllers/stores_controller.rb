@@ -39,7 +39,7 @@ class StoresController < ApplicationController
   private
 
   def store_params
-    params.require(:store).permit(:image, :name, :introduction, :address, :link, :google_iframe)
+    params.require(:store).permit(:image, :name, :introduction, :address, :link)
   end
 
 end
