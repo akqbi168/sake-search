@@ -88,5 +88,5 @@ gem 'better_errors'
 
 # AWS ec2 デプロイ用追加
 gem 'json'
-# gem 'mysql2'
+gem 'mysql2'
 gem 'listen', '>= 3.0.5', '< 3.2'
