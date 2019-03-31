@@ -176,6 +176,11 @@ footer {
   width: 50%;
   margin: 60px auto;
 
+  h1 {
+    width: 50%;
+    border-bottom: 3px solid #999;
+  }
+
   .admin-text {
     font-size: 30px;
     line-height: 60px;

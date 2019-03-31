@@ -20,7 +20,7 @@
 
   <% @stores.each do |store| %>
     <%= link_to store_path(store) do %>
-      <h5><%= '◇' + store.name %></h5><br>
+      <h5><%= '◇' + store.store_name %></h5><br>
     <% end %>
   <% end %>
 
