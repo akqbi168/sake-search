@@ -41,7 +41,11 @@ class ItemsController < ApplicationController
   end
 
   def result
-    @items = Item.search(params[:search])
+    if params[:search]
+      @items = Item.search(params[:search])
+    else
+      @items = Item.all
+    end
   end
 
   def search
