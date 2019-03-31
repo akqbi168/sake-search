@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     get "search", on: :collection
   end
 
-  resources :stores
+  resources :stores, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :tags, only: [:create, :destroy]
 
   get 'about', to: 'homes#about'

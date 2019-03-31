@@ -1,8 +1,5 @@
 class StoresController < ApplicationController
 
-  def index
-  end
-
   def new
     @store = Store.new
   end
@@ -34,6 +31,9 @@ class StoresController < ApplicationController
   end
 
   def destroy
+    @store = Store.find(params[:id])
+    @store.destroy
+    redirect_to admin_path
   end
 
   private

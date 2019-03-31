@@ -34,8 +34,10 @@
       <% end %>
     <% end %>
 
-    <% if user_signed_in? && current_user.id == 1 %>
-      <%= link_to '[Admin]', admin_path %>
+    <% if user_signed_in? %>
+      <% if current_user.id == 1 %>
+        <%= link_to '[Admin]', admin_path %>
+      <% end %>
     <% end %>
 
   </div>

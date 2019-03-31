@@ -4,8 +4,14 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  # deviseのresourceオブジェクトの中に保存するカラムを指定
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :generation_id, :gender_id])
+  end
+
+  # ログアウト後に遷移するpathを指定
+  def after_sign_out_path_for(resource)
+    root_path
   end
 
 end

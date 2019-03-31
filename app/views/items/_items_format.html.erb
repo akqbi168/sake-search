@@ -22,7 +22,7 @@
 
     <div class="field">
       <%= f.label :tag_ids, 'タグ選択' %><br>
-      <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name do |t| %>
+      <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :tag_name do |t| %>
         <%= t.check_box + t.label %>
       <% end %>
     </div>
@@ -53,7 +53,7 @@
 
     <div class="field">
       <%= f.label :store_ids, '店舗選択' %><br>
-      <%= f.collection_check_boxes :store_ids, Store.all, :id, :name do |t| %>
+      <%= f.collection_check_boxes :store_ids, Store.all, :id, :store_name do |t| %>
         <%= t.check_box + t.label %>
       <% end %>
     </div>
