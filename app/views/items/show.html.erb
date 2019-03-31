@@ -27,10 +27,10 @@
       <h3 class="items-stores-title">基本情報</h3><br>
 
       <p class="parameter-text">
-        <% if @item.sake_parameter? %>
+        <% if @item.sake_parameter == 0 || @item.sake_parameter? %>
           日本酒度 <strong><%= @item.sake_parameter %></strong>　
         <% end %>
-        <% if @item.acid_parameter? %>
+        <% if @item.acid_parameter == 0 || @item.acid_parameter? %>
           酸度 <strong><%= @item.acid_parameter %></strong>
         <% end %>
       </p>
