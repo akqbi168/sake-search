@@ -46,42 +46,42 @@ items = Item.create!([{
 }])
 
 # Tag を作成しつつ、Item と Tag の中間テーブルを埋める
-tag = Tag.new(name: "甘め")
+tag = Tag.new(tag_name: "甘め")
 tag.items = [items[0], items[2]]
 tag.save
 
-tag = Tag.new(name: "甘口")
+tag = Tag.new(tag_name: "甘口")
 # tag.items = [items[1]]
 tag.save
 
-tag = Tag.new(name: "辛め")
+tag = Tag.new(tag_name: "辛め")
 tag.items = [items[3]]
 tag.save
 
-Tag.create!(name: "辛口")
+Tag.create!(tag_name: "辛口")
 
-tag = Tag.new(name: "冷酒で")
+tag = Tag.new(tag_name: "冷酒で")
 tag.items = [items[0], items[1]]
 tag.save
 
-tag = Tag.new(name: "常温で")
+tag = Tag.new(tag_name: "常温で")
 tag.items = [items[0]]
 tag.save
 
-Tag.create!(name: "温めて")
+Tag.create!(tag_name: "温めて")
 
-tag = Tag.new(name: "男性向け")
+tag = Tag.new(tag_name: "男性向け")
 tag.items = [items[0], items[3]]
 tag.save
 
-tag = Tag.new(name: "女性向け")
+tag = Tag.new(tag_name: "女性向け")
 tag.items = [items[0], items[2]]
 tag.save
 
-Tag.create!(name: "爽快感")
-Tag.create!(name: "夏にピッタリ")
+Tag.create!(tag_name: "爽快感")
+Tag.create!(tag_name: "夏にピッタリ")
 
-tag = Tag.new(name: "フルーティー")
+tag = Tag.new(tag_name: "フルーティー")
 tag.items = [items[0], items[3]]
 tag.save
 
@@ -89,7 +89,7 @@ tag.save
 # Store を作る
 store = Store.new(
   image: File.open("./public/images/kengyo.png"),
-  name: "銀座酒蔵検校",
+  store_name: "銀座酒蔵検校",
   introduction: "昔ながらの「角打ち」が楽しめる、銀座の和酒専門店「銀座酒蔵検校」。
     普段店頭に並ばない希少酒、伝統を守り続ける良質な日本酒や焼酎、日本のワインを取り揃えております。
     店内中央にある白木のテーブルにて、様々な和酒を飲みながら、ゆったりとした時間をお過ごしください。",
@@ -101,7 +101,7 @@ store.save
 
 store = Store.new(
   image: File.open("./public/images/sakestand.jpg"),
-  name: "SAKESTAND shibuya dogenzakaue",
+  store_name: "SAKESTAND shibuya dogenzakaue",
   introduction: "日本酒をもっと気軽に、もっと楽しく。
     そんな想いからSAKESTANDというブランドを創りました。
     ノーチャージ、キャッシュオンスタイル。
@@ -114,7 +114,7 @@ store.save
 
 store = Store.new(
   image: File.open("./public/images/kurand2.png"),
-  name: "KURAND SAKE MARKET 渋谷店",
+  store_name: "KURAND SAKE MARKET 渋谷店",
   introduction: "KURAND SAKE MARKET渋谷店は、
 日本酒100種類飲み比べし放題、時間無制限、持ち込み自由
 が特長の日本酒専門店です。",
@@ -126,7 +126,7 @@ store.save
 
 store = Store.new(
   image: File.open("./public/images/kimijimaya.png"),
-  name: "銀座 君嶋屋",
+  store_name: "銀座 君嶋屋",
   introduction: "必ずいいお酒に出会える場所
 私たちにとって何より大切なのが、お客様との会話です。 
 飲むシーンからご予算やお好み、産地や蔵元の状況など、
@@ -140,7 +140,7 @@ store.save
 
 store = Store.new(
   image: File.open("./public/images/ana.jpg"),
-  name: "ANA Fine Dining & Bar",
+  store_name: "ANA Fine Dining & Bar",
   introduction: "「THE CONNOISSEURS(ザ・コノシュアーズ)」による、美味の共演。
 
 Connoisseur（コノシュアー）とは、「その道を極めた目利き」をあらわすことばです。

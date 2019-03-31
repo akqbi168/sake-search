@@ -20,8 +20,8 @@ class Item < ApplicationRecord
     def self.search(search)
       if search
         item_result = Item.where("name LIKE ? ", "%#{search}%")
-        tag_result = Item.joins(:tag).where("name LIKE ?", "%#{search}%")
-        store_result = Item.joins(:store).where("name LIKE ?", "%#{search}%")
+        tag_result = Item.joins(:tags).where("tag_name LIKE ?", "%#{search}%")
+        store_result = Item.joins(:stores).where("store_name LIKE ?", "%#{search}%")
         # 和集合（いずれの結果も含める）
         result = item_result | tag_result | store_result
         return result
