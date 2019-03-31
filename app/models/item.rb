@@ -12,10 +12,34 @@ class Item < ApplicationRecord
     mount_uploader :image, ImageUploader
 
   # 検索機能
+    # def self.search(search)
+    #   return Item.all unless search
+    #   Item.where(['name LIKE ?', "%#{search}%"])
+    # end
+
     def self.search(search)
-      return Item.all unless search
-      Item.where(['name LIKE ?', "%#{search}%"])
+      if search
+        item_result = Item.where("name LIKE ? ", "%#{search}%")
+        tag_result = Item.joins(:tag).where("name LIKE ?", "%#{search}%")
+        store_result = Item.joins(:store).where("name LIKE ?", "%#{search}%")
+        # 和集合（いずれの結果も含める）
+        result = item_result | tag_result | store_result
+        return result
+      end
     end
+
+
+    # def self.search(search)
+    #  if search
+    #   album_result = Cd.where("album LIKE ? ", "%#{search}%")
+    #   anime_result = Cd.joins(:anime).where("anime_title LIKE ?", "%#{search}%")
+    #   song_result = Cd.joins(discs: :songs).where("title LIKE ?", "%#{search}%")
+    #   result = album_result | anime_result | song_result
+    #     #和集合
+    #   return result
+    #  end
+    # end
+
 
   # enum for category
     enum category_id: {

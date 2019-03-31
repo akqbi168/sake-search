@@ -12,8 +12,8 @@ items = Item.create!([{
   name: "南部美人",
   sake_parameter: 4.0,
   acid_parameter: 1.5,
-  category_id: "3: 特別純米酒",
-  made_in_id: "03: 岩手県",
+  category_id: 3, # 特別純米酒
+  made_in_id: 3, #岩手県
   introduction: "フレッシュで飲みごたえのある味わいです。南部美人を飲んだことのある方もない方も、昨年の生酒を飲んだ方も「今年の」特別純米を飲み比べてみてください。"
 }, 
 {
@@ -21,8 +21,8 @@ items = Item.create!([{
   name: "獺祭 磨き三割九分",
   sake_parameter: "不明",
   acid_parameter: "不明",
-  category_id: "1: 純米大吟醸",
-  made_in_id: "35: 山口県",
+  category_id: 1, # 純米大吟醸
+  made_in_id: 35, # 山口県
   introduction: "華やかな上立ち香と口に含んだときに見せる蜂蜜のようなきれいな甘み。飲み込んだ後の長い余韻。これぞ純米大吟醸。"
 }, 
 {
@@ -30,8 +30,8 @@ items = Item.create!([{
   name: "田酒",
   sake_parameter: "0.0",
   acid_parameter: "1.5",
-  category_id: "3: 特別純米酒",
-  made_in_id: "02: 青森県",
+  category_id: 3, # 特別純米酒
+  made_in_id: 2, # 青森県
   introduction: "米の旨みが生きた飲み飽きしないスッキリした味わい、非常に人気のある銘酒です。"
 }, 
 {
@@ -39,8 +39,8 @@ items = Item.create!([{
   name: "天山 純米吟醸",
   sake_parameter: "1.0",
   acid_parameter: "1.4",
-  category_id: 3,
-  made_in_id: 41,
+  category_id: 3, # 特別純米酒
+  made_in_id: 41, # 佐賀県
   introduction: "地元佐賀の天山酒米栽培研究会の生産者の契約栽培「山田錦」を55％まで磨き上げ、蛍の名水天山山系の伏流水で仕込みました。
 口に含むと爽やかな香りとお米の旨みがバランスよく広がります。"
 }])
