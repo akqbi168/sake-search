@@ -1,6 +1,7 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
+    # create_table :users, :options => 'ENGINE=InnoDB ROW_FORMAT=DYNAMIC' do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -36,8 +37,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :first_name
       t.string :last_name_kana
       t.string :first_name_kana
-      t.integer :generation                             # enum使用。年代
-      t.integer :gender                                 # enum使用。null: false予定だが、「未回答」あり
+      t.integer :generation_id                          # enum使用。年代
+      t.integer :gender_id                              # enum使用。null: false予定だが、「未回答」あり
       t.text :image_id
       t.datetime :deleted_at                            # paranoia論理削除用。アカウント削除してもDB上に残る
 

@@ -13,6 +13,10 @@
   font-family: 'Hiragino Kaku Gothic', Avenir, Corbel, Osaka, sans-serif;
 }
 
+body {
+  background-color: #fafafa;
+}
+
 .clearfix::after {
   clear: both;
   content: '';
@@ -107,7 +111,7 @@ footer {
 .top-background-image {
   width: 100vw;
   min-height: 100vh;
-  background: image-url('sake2.jpg');
+  background: image-url('/images/sake2.jpg');
   background-size: cover;
 
   // 以下footer下部固定用
@@ -147,12 +151,10 @@ footer {
 
     a {
       color: #444;
-      // background-color: #999;
-      // border-radius: 5%;
-    }
-    a:hover {
-      background-color: #eee;
 
+      &:hover {
+        background-color: #eee;
+      }
     }
   }
 }
@@ -216,8 +218,6 @@ footer {
 
 
 
-
-
 // stores#new
 
 .stores-container {
@@ -236,6 +236,12 @@ footer {
 .items-show-container {
   width: 80vw;
   margin: 60px auto;
+
+  .items-stores-title {
+    display: inline-block;
+    margin: 30px 0 20px;
+    border-bottom: 3px solid #999;
+  }
 }
 
 .sake-visual-area {
@@ -276,7 +282,53 @@ footer {
   .introduction-text {
     margin-top: 10px;
   }
+}
 
+.items-stores-area {
+  margin-top: 10px;
+
+  .items-stores-unit {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    border: 1px solid #333;
+    position: relative;
+
+    .items-stores-visual {
+      width: 200px;
+      height: 200px;
+    }
+
+    .black-mask {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0; // 通常はmaskを非表示
+      background-color: rgba(0,0,0,0.7); // maskは半透明
+      transition: 0.2s ease;
+      text-align: center;
+    }
+
+    .items-stores-name {
+      font-size: 24px;
+      padding: 20px 10px 0;
+      color: #fff;
+    }
+
+    .items-stores-text {
+      padding: 10px;
+      color: #fff;
+      line-height: 1.4em;
+    }
+
+    .black-mask:hover {
+      opacity: 1;
+    }
+  }
 }
 
 
@@ -347,3 +399,58 @@ footer {
 }
 
 
+
+// stores#show
+
+.stores-show-container {
+  width: 80vw;
+  margin: 60px auto;
+}
+
+.store-visual-area {
+  width: 25%;
+  float: left;
+
+  .store-visual {
+    width: 20vw;
+    height: 20vw;
+    background-size: cover;
+  }
+}
+
+.stores-show-body {
+  width: 75%;
+  padding-left: 5%;
+  font-size: 1.3vmax;
+  float: right;
+
+  .stores-title-name {
+    font-size: 5vmax;
+  }
+
+  .stores-show-address {
+    font-size: 2vmax;
+  }
+
+  .stores-show-link:hover {
+    display: inline-block;
+    background-color: #aaa;
+  }
+
+  .introduction-text {
+    margin-top: 10px;
+  }
+
+  .iframe {
+    width: 60vw; // calc(80vw * 75% * 100%)
+    max-width: 600px;
+    height: 45vw;
+    max-height: 450px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+
+    &:hover {
+      box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    }
+  }
+}

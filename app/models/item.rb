@@ -1,9 +1,12 @@
 class Item < ApplicationRecord
 
   has_and_belongs_to_many :tags
+  has_and_belongs_to_many :stores
 
   # バリデーション
-    # validates :name, presence: true
+    validates :name, presence: true
+    validates :category_id, presence: true
+    validates :made_in_id, presence: true
 
   # 画像アップロード用
     mount_uploader :image, ImageUploader
@@ -13,9 +16,6 @@ class Item < ApplicationRecord
       return Item.all unless search
       Item.where(['name LIKE ?', "%#{search}%"])
     end
-
-  # 画像アップロード用
-    mount_uploader :image, ImageUploader
 
   # enum for category
     enum category_id: {

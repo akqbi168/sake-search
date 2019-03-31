@@ -12,6 +12,8 @@
 
     <% if controller.action_name == "top" %>
       EN - <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+    <%# if controller.action_name == "top" %>
+      <!-- EN -->
 
     <% elsif controller.controller_name == "items" %>
       <% if controller.action_name == "new" %>

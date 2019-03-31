@@ -1,2 +1,36 @@
-<h1>Stores#show</h1>
-<p>Find me in app/views/stores/show.html.erb</p>
+<%= render 'layouts/header' %>
+
+<div class="stores-show-container clearfix">
+
+  <div class="store-visual-area">
+    <%= image_tag @store.image.to_s, class: 'store-visual' %>
+  </div>
+
+  <div class="stores-show-body">
+      <span class="stores-title-name">
+        <%= @store.name %>
+      </span>
+
+      <div class="stores-show-address">
+        <p><%= @store.address %></p>
+      </div>
+
+      <div class="stores-show-link">
+        <%= link_to @store.link, @store.link, :target => "_blank" %>
+      </div>
+
+      <div class="introduction-text">
+        <%= @store.introduction %>
+      </div>
+
+      <div class="introduction-text">
+        <iframe src="https://maps.google.co.jp/maps?output=embed&q=<%= @store.address%>" class="iframe" allowfullscreen></iframe>
+      </div>
+
+  </div>
+
+
+
+</div>
+
+<%= render 'layouts/footer' %>

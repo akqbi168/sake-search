@@ -24,14 +24,56 @@
       </h5>
     <% end %></p>
 
+      <h3 class="items-stores-title">基本情報</h3><br>
+
       <p class="parameter-text">
-        日本酒度 <strong><%= @item.sake_parameter %></strong>　
-        酸度 <strong><%= @item.acid_parameter %></strong>
+        <% if @item.sake_parameter == 0 || @item.sake_parameter? %>
+          日本酒度 <strong><%= @item.sake_parameter %></strong>　
+        <% end %>
+        <% if @item.acid_parameter == 0 || @item.acid_parameter? %>
+          酸度 <strong><%= @item.acid_parameter %></strong>
+        <% end %>
       </p>
 
       <div class="introduction-text">
         <%= @item.introduction %>
       </div>
+
+      <div class="items-stores-area">
+
+        <h3 class="items-stores-title">このお酒が飲める場所</h3><br>
+
+        <% if @item.stores.any? %>
+          <% @item.stores.shuffle.each do |store| %>
+
+            <div class="items-stores-unit">
+              <%= image_tag store.image.to_s, fallback: "/images/no_image.png", class: "items-stores-visual" %>
+
+              <!-- リンクのクリック時は、その時前面に出ているblack-maskに貼る -->
+              <%= link_to store_path(store.id) do %>
+
+                <div class="black-mask">
+                  <h4 class="items-stores-name">
+                    <%= store.name.slice(0..19) %>
+                    <% if store.name.length >= 20 %>...<% end %>
+                  </h4>
+                  <h5 class="items-stores-text">
+                    <%= store.introduction.slice(0..50) %>
+                    <% if store.introduction.length >= 50 %>...<% end %>
+                  </h5>
+                </div>
+
+              <% end %>
+            </div>
+
+          <% end %>
+
+        <% else %>
+          <p>coming soon...</p>
+        <% end %>
+
+      </div>
+
   </div>
 
 
