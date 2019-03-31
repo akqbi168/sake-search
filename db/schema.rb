@@ -44,7 +44,6 @@ ActiveRecord::Schema.define(version: 2019_03_30_124034) do
     t.text "introduction"
     t.string "address"
     t.string "link"
-    t.text "google_iframe"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
