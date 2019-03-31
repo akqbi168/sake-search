@@ -10,12 +10,10 @@
   <!-- header 中央 -->
   <div class="header-center">
 
-    <% if controller.action_name == "top" %>
-      EN - <%= link_to 'logout', destroy_user_session_path, method: :delete %>
     <%# if controller.action_name == "top" %>
       <!-- EN -->
 
-    <% elsif controller.controller_name == "items" %>
+    <% if controller.controller_name == "items" %>
       <% if controller.action_name == "new" %>
         + 銘柄追加 +
       <% elsif controller.action_name == "edit" %>
@@ -36,14 +34,22 @@
       <% end %>
     <% end %>
 
+    <% if user_signed_in? && current_user.id == 1 %>
+      <%= link_to '[Admin]', admin_path %>
+    <% end %>
+
   </div>
 
   <!-- header 右側 -->
   <div class="header-right">
     <h4>
       <ul>
-        <li><%= link_to '新規登録', new_user_registration_path %></li>
-        <li><%= link_to 'ログイン', new_user_session_path %></li>
+        <% if current_user %>
+          <li><%=link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to '新規登録', new_user_registration_path %></li>
+          <li><%= link_to 'ログイン', new_user_session_path %></li>
+        <% end %>
       </ul>
     </h4>
   </div>

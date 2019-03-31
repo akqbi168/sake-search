@@ -1,0 +1,27 @@
+<%= render 'layouts/header' %>
+
+<div class="admin-index">
+
+  <h1>Admin Index</h1>
+
+  <%= link_to '+銘柄追加+', new_item_path, class: "admin-text" %><br>
+
+  <%= link_to '+銘柄一覧+', items_result_path, class: "admin-text" %><br>
+
+
+
+  <% @items.each do |item| %>
+    <%= link_to item_path(item) do %>
+      <h5><%= '◇' + item.name %></h5><br>
+    <% end %>
+  <% end %>
+
+  <%= link_to '+店舗追加+', new_store_path, class: "admin-text" %><br>
+
+  <% @stores.each do |store| %>
+    <%= link_to store_path(store) do %>
+      <h5><%= '◇' + store.name %></h5><br>
+    <% end %>
+  <% end %>
+
+</div>

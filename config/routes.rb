@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:create, :destroy]
 
   get 'about', to: 'homes#about'
+  get 'admin', to: 'homes#admin'
   root 'homes#top'
 
 end

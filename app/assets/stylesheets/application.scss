@@ -159,6 +159,27 @@ footer {
   }
 }
 
+// homes#admin
+
+.admin-index {
+  width: 50%;
+  margin: 60px auto;
+
+  .admin-text {
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  h5 {
+    display: inline-block;
+  }
+
+  a:hover,
+  h5:hover {
+    background-color: #999;
+  }
+}
+
 
 
 // devise
