@@ -202,7 +202,6 @@ footer {
   h2,
   .btn {
     margin-bottom: 60px;
-    // border: 50px solid red;
   }
 }
 
@@ -234,7 +233,6 @@ footer {
   padding: 0 30px;
   float: left;
   border-radius: 3%;
-  // background-color: yellow;
 }
 
 
@@ -355,6 +353,24 @@ footer {
 
 
 // items#result
+
+.search-area {
+  width: 80vw;
+  margin: 60px auto 0;
+  line-height: 50px;
+  font-size: 30px;
+
+  .search-box {
+    width: 420px;
+    padding-left: 20px;
+  }
+
+  .submit-tag {
+    padding: 0 10px;
+  }
+}
+
+
 .result-search {
   margin: 0 auto;
 }
@@ -388,7 +404,6 @@ footer {
       max-width: 160px;
       height: 160px;
       position: absolute;
-      // background-color: #eee;
       background: linear-gradient(to bottom, #fff, #ddd);
       background-size: cover;
       border-radius: 50%;
@@ -408,7 +423,6 @@ footer {
 
   .result-items-name {
     height: 30px;
-    // line-height: 30px;
     transition: 0.3s;
   }
 
