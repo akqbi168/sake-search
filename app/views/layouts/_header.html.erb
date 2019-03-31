@@ -10,10 +10,10 @@
   <!-- header 中央 -->
   <div class="header-center">
 
-    <% if controller.action_name == "top" %>
-      EN
+    <%# if controller.action_name == "top" %>
+      <!-- EN -->
 
-    <% elsif controller.controller_name == "items" %>
+    <% if controller.controller_name == "items" %>
       <% if controller.action_name == "new" %>
         + 銘柄追加 +
       <% elsif controller.action_name == "edit" %>
