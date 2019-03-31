@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get 'items/result'
 
   resources :users, only: [:index, :create, :show, :edit, :update, :destroy]
-  resources :items, only: [:new, :create, :show, :edit, :update, :destroy]
+
+  resources :items, only: [:new, :create, :show, :edit, :update, :destroy] do
+    get "search", on: :collection
+  end
+
   resources :stores
   resources :tags, only: [:create, :destroy]
 
