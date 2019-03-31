@@ -27,5 +27,5 @@ production:
   encoding: utf8mb4
   collation: utf8mb4_general_ci
   host: rds-mysql-server.cizt9l0h957s.us-east-2.rds.amazonaws.com
-  username: akqbi168
-  password: aaii1188
+  username: root
+  password: hogehoge
