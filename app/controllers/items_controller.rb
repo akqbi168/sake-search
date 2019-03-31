@@ -12,11 +12,9 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-puts @item.errors.full_messages
     if @item.save
       redirect_to root_path
     else
-puts @item.errors.full_messages
       # render :new
       redirect_to new_item_path
     end
@@ -33,7 +31,7 @@ puts @item.errors.full_messages
   def update
     @item = Item.find(params[:id])
     if @item.update(item_params)
-      redirect_to root_path
+      redirect_to item_path(@item)
     else
       render 'edit'
     end
@@ -53,7 +51,7 @@ puts @item.errors.full_messages
   private
 
     def item_params
-      params.require(:item).permit(:image, :name, :sake_parameter, :acid_parameter, :category_id, :made_in_id, :introduction, :image_cache, tag_ids: [])
+      params.require(:item).permit(:image, :name, :sake_parameter, :acid_parameter, :category_id, :made_in_id, :introduction, :image_cache, tag_ids: [], store_ids: [])
     end
 
 end

@@ -51,6 +51,13 @@
       <% end %>
     </div>
 
+    <div class="field">
+      <%= f.label :store_ids, '店舗選択' %><br>
+      <%= f.collection_check_boxes :store_ids, Store.all, :id, :name do |t| %>
+        <%= t.check_box + t.label %>
+      <% end %>
+    </div>
+
     <div class="actions">
       <% if action_name == "new" %>
         <%= f.submit "商品の作成", method: :post, class:"" %>
