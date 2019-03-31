@@ -140,10 +140,21 @@ footer {
   .tops-search-box {
     width: 420px;
     padding-left: 20px;
+    border: 2px solid #666;
   }
 
   .tops-submit-tag {
     padding: 0 10px;
+    border: 2px solid #666;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.4);
+      transition: 0.2s;
+    }
+
+    &:active {
+      transform: translateY(5px);
+    }
   }
 
   .tops-search-details {
@@ -357,16 +368,29 @@ footer {
 .search-area {
   width: 80vw;
   margin: 60px auto 0;
-  line-height: 50px;
-  font-size: 30px;
+
+  line-height: calc(30px + 2vw);
+  font-size: calc(20px + 1vw);
 
   .search-box {
-    width: 420px;
+    width: 50vw;
+    max-width: 420px;
     padding-left: 20px;
+    border: 2px solid #666;
   }
 
   .submit-tag {
     padding: 0 10px;
+    border: 2px solid #666;
+
+    &:hover {
+      background-color: rgba(0,0,0,0.4);
+      transition: 0.2s;
+    }
+
+    &:active {
+      transform: translateY(5px);
+    }
   }
 }
 
