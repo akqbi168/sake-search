@@ -1,5 +1,12 @@
 <%= render 'layouts/header' %>
 
+    <div class="search-area">
+      <%= form_tag items_result_path, method: :get do %>
+        <%= text_field_tag :search, '' ,{ :placeholder => '銘柄を入力', :class => 'search-box' } %>
+        <%= submit_tag '検索',:class => 'submit-tag' %>
+      <% end %>
+    </div>
+
 <div class="result-search" style="display:none">
   <%= form_tag items_result_path, method: :get do %>
     <%= text_field_tag :search %>
@@ -10,7 +17,7 @@
 <div class="items-result-container">
 
   <h2 class="result-title-text">検索結果一覧</h2>
-    <% @items.each do |item| %>
+    <% @items.shuffle.each do |item| %>
 
       <div class="result-row clearfix">
         <div class="result-visual-area">
@@ -26,20 +33,13 @@
             <h3 class="result-items-name"><%= item.name %></h3>
           <% end %>
 
-<!-- ここから古い -->
-          <span style="display:none">
-            <p>[<%= item.category_id.slice(3..9) %>]<br>
-            <%= item.introduction %></p>
-          </span>
-<!-- ここまで -->
-
-            <p>[<%= item.category_id.slice(3..9) %>] / 
-
+          <p>[<%= item.category_id.slice(3..9) %>] / 
             <% item.tags.each do |tag| %>
               [<%= tag.tag_name %>]
-            <% end %></p>
+            <% end %>
+          </p>
 
-            <p><%= item.introduction %></p>
+          <p><%= item.introduction %></p>
         </div>
 
       </div>

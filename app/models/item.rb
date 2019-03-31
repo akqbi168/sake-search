@@ -11,36 +11,6 @@ class Item < ApplicationRecord
   # 画像アップロード用
     mount_uploader :image, ImageUploader
 
-  # 検索機能
-    # def self.search(search)
-    #   return Item.all unless search
-    #   Item.where(['name LIKE ?', "%#{search}%"])
-    # end
-
-    def self.search(search)
-      if search
-        item_result = Item.where("name LIKE ? ", "%#{search}%")
-        tag_result = Item.joins(:tags).where("tag_name LIKE ?", "%#{search}%")
-        store_result = Item.joins(:stores).where("store_name LIKE ?", "%#{search}%")
-        # 和集合（いずれの結果も含める）
-        result = item_result | tag_result | store_result
-        return result
-      end
-    end
-
-
-    # def self.search(search)
-    #  if search
-    #   album_result = Cd.where("album LIKE ? ", "%#{search}%")
-    #   anime_result = Cd.joins(:anime).where("anime_title LIKE ?", "%#{search}%")
-    #   song_result = Cd.joins(discs: :songs).where("title LIKE ?", "%#{search}%")
-    #   result = album_result | anime_result | song_result
-    #     #和集合
-    #   return result
-    #  end
-    # end
-
-
   # enum for category
     enum category_id: {
       '1: 純米大吟醸':1,
@@ -62,5 +32,19 @@ class Item < ApplicationRecord
       '31: 鳥取県':31, '32: 島根県':32, '33: 岡山県':33, '34: 広島県':34,   '35: 山口県':35, '36: 徳島県':36,   '37: 香川県':37, '38: 愛媛県':38, '39: 高知県':39, '40: 福岡県':40,
       '41: 佐賀県':41, '42: 長崎県':42, '43: 熊本県':43, '44: 大分県':44,   '45: 宮崎県':45, '46: 鹿児島県':46, '47: 沖縄県':47, '00: 海外':48
     }
+
+  # 検索機能
+    def self.search(search)
+      if search
+        item_result = Item.where("name LIKE ? ", "%#{search}%")
+        item_intro_result = Item.where("introduction LIKE ? ", "%#{search}%")
+        tag_result = Item.joins(:tags).where("tag_name LIKE ?", "%#{search}%")
+        store_result = Item.joins(:stores).where("store_name LIKE ?", "%#{search}%")
+        store_address_result = Item.joins(:stores).where("address LIKE ?", "%#{search}%")
+        # 和集合（いずれの結果も含める）
+        result = item_result | item_intro_result | tag_result | store_result | store_address_result
+        return result
+      end
+    end
 
 end

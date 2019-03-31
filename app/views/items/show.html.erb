@@ -19,9 +19,11 @@
       </h5>
 
     <% @item.tags.each do |tag| %>
+        <%= link_to items_result_path(:search => tag.tag_name), method: :get do %>
       <h5 class="tag-text btn btn-xs btn-success">
-        <%= tag.name %>
+          <%= tag.tag_name %>
       </h5>
+        <% end %>
     <% end %></p>
 
       <h3 class="items-stores-title">基本情報</h3><br>
@@ -54,8 +56,8 @@
 
                 <div class="black-mask">
                   <h4 class="items-stores-name">
-                    <%= store.name.slice(0..19) %>
-                    <% if store.name.length >= 20 %>...<% end %>
+                    <%= store.store_name.slice(0..19) %>
+                    <% if store.store_name.length >= 20 %>...<% end %>
                   </h4>
                   <h5 class="items-stores-text">
                     <%= store.introduction.slice(0..50) %>
