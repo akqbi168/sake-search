@@ -16,7 +16,6 @@ class ItemsController < ApplicationController
       redirect_to admin_path
     else
       render :new
-      # redirect_to new_item_path
     end
   end
 
