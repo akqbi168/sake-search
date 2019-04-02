@@ -9,7 +9,7 @@
 
 <div class="items-result-container">
 
-  <h2 class="result-title-text">検索結果一覧</h2>
+  <h2 class="result-title-text">結果一覧</h2>
     <% @items.shuffle.each do |item| %>
 
       <div class="result-row clearfix">
@@ -32,14 +32,14 @@
             <% end %>
           </p>
 
-          <p><%= item.introduction %></p>
+          <p>
+            <%= item.introduction.slice(0..119) %>
+            <% if item.introduction.length >= 119 %>...<% end %>
+          </p>
         </div>
 
       </div>
     <% end %>
-
-
-
 
 </div>
 
