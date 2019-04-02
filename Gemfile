@@ -86,6 +86,11 @@ gem 'paranoia'
 gem 'pry-rails'
 gem 'better_errors'
 
+# rspec テスト用 (デプロイ不要のためこの書き方)
+group :development, :test do
+  gem 'rspec-rails'
+end
+
 # AWS ec2 デプロイ用追加
 gem 'json'
 # gem 'mysql2'
