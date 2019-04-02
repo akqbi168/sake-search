@@ -1,24 +1,26 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+sake-searchとは、日本酒の銘柄検索サービスです。<br>
+<br>
+主な機能は以下の2つとなります。<br>
+<br>
+1)日本酒銘柄を検索し、その詳細な情報を見ることができる<br>
+検索方法は、銘柄名、タグ名、取り扱い店舗名（※後述）となります。<br>
+「あの銘柄ってどんなお酒だったっけ？」<br>
+「甘口のお酒をもっと知りたいんだけど、何かないだろうか？」<br>
+「好みのお酒をもっと探したい！」<br>
+などというニーズにアプローチしています。<br>
+<br>
+2)各銘柄ごとに、取り扱う店舗（飲食店）を知ることができる<br>
+店舗情報には地図やURLのリンクなどが貼っており、<br>
+「このお酒飲みたい時はここのレストランに行けばいいのか！」<br>
+などということが分かります。<br>
+<br>
+ワインバルに対して、日本酒バルってあまり馴染みがない方も多いのではないでしょうか。<br>
+同じ醸造酒でありながら、日本発祥の日本酒よりワインやビールより距離がある気がしてなりません。<br>
+決して、飲み放題メニューの端に書いてある、ただの悪酔いするお酒ではないのです。<br>
+<br>
+このサービスを通して、特に若い方を中心に、<br>
+日本酒の魅力を感じてもらい、日本酒人口を増やしていきたいと思います。<br>
+そして、ワインが世界中で広く飲まれているように、<br>
+あらゆる国において、人々をちょっと幸せにするものとして<br>
+美味しい日本酒がもっともっと選ばれていくことを願っています。<br>
+<br>

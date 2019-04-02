@@ -10,7 +10,7 @@
 
     <div class="tops-search-area">
       <%= form_tag items_result_path, method: :get do %>
-        <%= text_field_tag :search, '' ,{ :placeholder => '銘柄を入力', :class => 'tops-search-box' } %>
+        <%= text_field_tag :search, '' ,{ :placeholder => '銘柄/場所/特徴を入力', :class => 'tops-search-box' } %>
         <%= submit_tag '検索',:class => 'tops-submit-tag' %>
       <% end %>
     </div>
