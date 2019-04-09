@@ -157,8 +157,12 @@ footer {
     }
   }
 
-  .tops-search-details {
+  .tops-search-details,
+  .tops-about-link {
+    width: 180px;
     margin: 1vh 20px;
+    font-size: 16px;
+    float: left;
 
     a {
       color: #444;
@@ -196,6 +200,34 @@ footer {
     background-color: #999;
   }
 }
+
+
+
+// homes#about
+.about-container {
+  width: 88vw;
+  margin: 60px auto;
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 24px;
+    letter-spacing: 5px;
+    margin: 20px 0;
+  }
+
+  .about-heading {
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color: #ff8c00;
+    border-bottom:solid;
+    border-color:#ff8c00;
+    border-width: 3px;
+    padding-bottom: 2px;
+  }
+}
+
 
 
 
