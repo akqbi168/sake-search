@@ -6,6 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# User.admin を作る
+User.create(
+  email: '00@00',
+  password: '000000',
+  admin: true
+  )
+
+
 # Item を作る
 items = Item.create!([{
   image: File.open("./public/images/nanbu-bijin-tokujun.png"),

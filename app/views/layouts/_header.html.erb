@@ -3,17 +3,17 @@
   <!-- header 左側 -->
   <div class="header-left">
     <p>
-      <%= link_to 'Sake-search', root_path %>
+      <%= link_to 'Sake Search', root_path %>
     </p>
   </div>
 
   <!-- header 中央 -->
   <div class="header-center">
 
-    <%# if controller.action_name == "top" %>
-      <!-- EN -->
+    <% if controller.action_name == "about" %>
+      + サイト紹介 +
 
-    <% if controller.controller_name == "items" %>
+    <% elsif controller.controller_name == "items" %>
       <% if controller.action_name == "new" %>
         + 銘柄追加 +
       <% elsif controller.action_name == "edit" %>
