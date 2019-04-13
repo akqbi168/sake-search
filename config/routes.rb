@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:create, :destroy]
 
   get 'admin', to: 'homes#admin'
+  get 'admin', to: 'homes#admin'
   root 'homes#top'
 
 end
