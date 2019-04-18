@@ -12,6 +12,7 @@ class HomesController < ApplicationController
   def admin
     @items = Item.all
     @stores = Store.all
+    @users = User.all
   end
 
   private
