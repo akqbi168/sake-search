@@ -6,8 +6,8 @@ class HomesController < ApplicationController
     @items = Item.search(params[:search])
   end
 
-  # def about
-  # end
+  def about
+  end
 
   def admin
     @items = Item.all
