@@ -8,7 +8,7 @@
 
 # User.admin を作る
 User.create(
-  name: 'admin'
+  first_name: 'admin',
   email: '00@00',
   password: '000000',
   admin: true
