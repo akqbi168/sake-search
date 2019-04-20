@@ -42,4 +42,22 @@
     </h5></table>
   <% end %>
 
+  <p class="admin-text">ユーザー一覧</p>
+
+  <% @users.each do |user| %>
+    <table><h5>
+      <tr>
+        <td style="width:250px">
+          <%= link_to '[' + user.id.to_s + '] ' + user.first_name, user_path(user) %>
+        </td>
+        <td style="width:40px">
+          <%= link_to '編集', edit_user_path(user) %>
+        </td>
+        <td style="width:40px">
+          <%= link_to '削除', user_path(user), method: :delete, data: { confirm: "本当に削除しますか？"} %>
+        </td>
+      </tr>
+    </h5></table>
+  <% end %>
+
 </div>
