@@ -113,7 +113,13 @@ footer {
 
   // 以下footer下部固定用
   position: relative; /*←相対位置*/
-  padding-bottom: 40px; /*←footerの高さ*/
+  // padding-bottom: 40px; /*←footerの高さ*/
+}
+
+.bg-filter {
+  // 背景画像透過用
+  height: 100vh;
+  background: rgba(255,255,255,0.5);
 }
 
 .top-container {
