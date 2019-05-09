@@ -1,5 +1,14 @@
 <div style="height:40px">
   <footer>
     <h6>&copy; 2019 Sake-search</h6>
+
+    <!-- スマホ表示の時にadminを表示 -->
+    <span class="footer-right sp-only">
+      <% if user_signed_in? %>
+        <% if current_user.id == 1 %>
+          <%= link_to '[Admin]', admin_path %>
+        <% end %>
+      <% end %>
+    </span>
   </footer>
 </div>
