@@ -119,7 +119,7 @@ footer {
 .bg-filter {
   // 背景画像透過用
   height: 100vh;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.3);
 }
 
 .top-container {
@@ -638,14 +638,19 @@ footer {
     // width: 100vw;
     // min-height: 100vh;
     // background: image-url('/images/sake2.jpg');
-    // background-size: cover;
-    background-position: right;
-    opacity: 0.4;
-    z-index: 0;
+    background: image-url('/images/sake4ax.jpg');
+    background-size: 100% 100%;
+    background-position: center right;
 
     // 以下footer下部固定用
     // position: relative; /*←相対位置*/
     padding-bottom: 20px; /*←footerの高さ*/
+  }
+
+  .bg-filter {
+    // 背景画像透過用
+    height: 100vh;
+    background: rgba(255,255,255,0.6);
   }
 
   .top-container {
@@ -667,7 +672,7 @@ footer {
     }
 
     .tops-search-box {
-      width: 60vw;    //420px;
+      width: 70vw;    //420px;
       padding-left: 10px;   //15px;
       // border: 2px solid #666;
     }
@@ -688,16 +693,16 @@ footer {
 
     .tops-search-details,
     .tops-about-link {
-      width: 180px;
-      margin: 1vh 20px;
-      font-size: 16px;
-      float: left;
+      // width: 180px;
+      margin: 1vh 20px 0;
+      font-size: 14px;
+      // float: left;
 
       a {
-        color: #444;
+        // color: #444;
 
         &:hover {
-          background-color: #eee;
+          // background-color: #eee;
         }
       }
     }
