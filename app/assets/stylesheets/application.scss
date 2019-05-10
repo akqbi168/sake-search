@@ -34,6 +34,10 @@ a:hover {
   transition: 0.2s;
 }
 
+.sp-only {
+  display: none;
+}
+
 
 
 // layouts/header
@@ -78,13 +82,6 @@ a:hover {
   }
 }
 
-.dropdown-menu {
-  width: 60px;
-  font-size: 24px;
-  line-height: 24px;
-  text-align: right;
-}
-
 
 
 // layouts/footer
@@ -116,7 +113,13 @@ footer {
 
   // 以下footer下部固定用
   position: relative; /*←相対位置*/
-  padding-bottom: 40px; /*←footerの高さ*/
+  // padding-bottom: 40px; /*←footerの高さ*/
+}
+
+.bg-filter {
+  // 背景画像透過用
+  height: 100vh;
+  background: rgba(255,255,255,0.3);
 }
 
 .top-container {
@@ -553,4 +556,160 @@ footer {
       box-shadow: 0 0 4px rgba(0,0,0,0.5);
     }
   }
+}
+
+
+
+
+
+// スマートフォンサイズ(425px)以下の大きさの場合
+
+@media screen and (max-width:425px) {
+
+  // header responsive
+  .navbar {
+    height: 40px;
+    // display: flex;
+    // justify-content: center;
+    // position: relative;
+    // background-color: #eee;
+    opacity: 0.7;
+    font-size: 20px;
+    line-height: 40px;
+    // box-shadow: 0 4px 12px rgba(black, 0.1);
+  }
+
+  .header-left {
+    // position: absolute;
+    // left: 0;
+    padding-left: 20px;
+  }
+
+  .header-center {
+    display: none;
+  }
+
+  .header-right {
+    height: 40px;
+    // position: absolute;
+    // right: 0;
+    padding-right: 20px;
+
+    a:hover {
+      color: #ff8c00;
+      font-weight: bold;
+    }
+  }
+
+
+
+  // footer responsive
+  footer {
+    // width: 100%;
+    height: 20px;
+    // background-color: #eee;
+    // opacity: 0.7;
+    // position: fixed;
+    // bottom: 0;
+
+    h6 {
+      font-size: 0.8em;
+      // padding-left: 30px;
+      line-height: 20px;
+      // margin: 0;
+      display: inline;
+    }
+
+    .footer-right {
+      position: absolute;
+      right: 0;
+      margin-right: 20px;
+    }
+
+    .sp-only {
+      display: inline;
+    }
+  }
+
+
+
+  // homes#top responsive
+  .top-background-image {
+    // width: 100vw;
+    // min-height: 100vh;
+    // background: image-url('/images/sake2.jpg');
+    background: image-url('/images/sake4ax.jpg');
+    background-size: 100% 100%;
+    background-position: center right;
+
+    // 以下footer下部固定用
+    // position: relative; /*←相対位置*/
+    padding-bottom: 20px; /*←footerの高さ*/
+  }
+
+  .bg-filter {
+    // 背景画像透過用
+    height: 100vh;
+    background: rgba(255,255,255,0.6);
+  }
+
+  .top-container {
+    width: 90vw;
+    // margin: 20vh auto 0;
+
+    .slogan-area {
+      h1 {
+        // color: #444;
+        font-size: 30px;
+        // font-weight: bold;
+      }
+    }
+
+    .tops-search-area {
+      // margin-top: 10vh;
+      font-size: 16px;    //24px;
+      line-height: 30px;    //30px;
+    }
+
+    .tops-search-box {
+      width: 70vw;    //420px;
+      padding-left: 10px;   //15px;
+      // border: 2px solid #666;
+    }
+
+    .tops-submit-tag {
+      // padding: 0 10px;
+      // border: 2px solid #666;
+
+      &:hover {
+        // background-color: rgba(0,0,0,0.4);
+        // transition: 0.2s;
+      }
+
+      &:active {
+        // transform: translateY(5px);
+      }
+    }
+
+    .tops-search-details,
+    .tops-about-link {
+      // width: 180px;
+      margin: 1vh 20px 0;
+      font-size: 14px;
+      // float: left;
+
+      a {
+        // color: #444;
+
+        &:hover {
+          // background-color: #eee;
+        }
+      }
+    }
+  }
+
+
+
+
+
 }
