@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources :stores, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :tags, only: [:create, :destroy]
 
-  get 'admin', to: 'homes#admin'
+  get 'about', to: 'homes#about'
   get 'admin', to: 'homes#admin'
   root 'homes#top'
 
