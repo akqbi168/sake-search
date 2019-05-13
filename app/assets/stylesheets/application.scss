@@ -3,6 +3,8 @@
 @import "homes.scss";
 @import "items.scss";
 @import "stores.scss";
+@import "tags.scss";
+@import "users.scss";
 
 
 
@@ -262,6 +264,44 @@ footer {
 
 .field {
   margin-bottom: 20px;
+}
+
+
+
+// users#show
+
+.users-container {
+  width: 80%;
+  margin: 60px auto;
+  // background-color: orange;
+
+  .users-image-wrapper {
+    width: 30%;
+    height: 500px;
+    float: left;
+    // background-color: yellow;
+
+    .users-image {
+      width: 12.8vw;
+      margin: 12.8vw;
+    }
+  }
+
+  .users-profile-wrapper {
+    width: 70%;
+    float: left;
+    padding: 20px 40px;
+    // background-color: blue;
+
+    .users-profile-box {
+      // width: 100%;
+      // height: 60px;
+      font-size: 16px;
+      line-height: 3em;
+      // background-color: #aaa;
+    }
+  }
+
 }
 
 
@@ -562,6 +602,18 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 // スマートフォンサイズ(425px)以下の大きさの場合
 
 @media screen and (max-width:425px) {
@@ -644,7 +696,7 @@ footer {
 
     // 以下footer下部固定用
     // position: relative; /*←相対位置*/
-    padding-bottom: 20px; /*←footerの高さ*/
+    // padding-bottom: 20px; /*←footerの高さ*/
   }
 
   .bg-filter {

@@ -1,0 +1,38 @@
+<%= render 'layouts/header' %>
+
+<div class="users-container clearfix">
+
+  <div class="users-image-wrapper">
+    <%= image_tag @user.image_id.to_s, class: 'users-image', fallback: "/images/no_image.png" %>
+  </div>
+
+  <div class="users-profile-wrapper">
+    <%= form_for(@user) do |f| %>
+      <table>
+        <tr class="users-profile-box">
+          <td>名前：</td>
+          <td><%= f.text_field :last_name %>　<%= f.text_field :first_name %>　様</td>
+        </tr>
+        <tr class="users-profile-box">
+          <td>年代</td>
+          <td><%= f.select :generation_id, User.generation_ids.keys %></td>
+        </tr>
+        <tr class="users-profile-box">
+          <td>性別：</td>
+          <td><%= f.select :gender_id, User.gender_ids.keys %></td>
+        </tr>
+        <tr class="users-profile-box">
+          <td>メールアドレス：　</td>
+          <td><%= f.email_field :email, :size=>"42" %></td>
+        </tr>
+      </table>
+
+      <%= f.submit '更新', class:"btn btn-primary" %>
+
+    <% end %>
+  </div>
+
+
+</div>
+
+<%= render 'layouts/footer' %>
