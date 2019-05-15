@@ -193,7 +193,7 @@ store = Store.new(
   store_name: "Kuma Sushi + Sake",
   introduction: "Kuma Sushi + Sakeは、San FranciscoのPolk and Postのすぐそばにあります。
     私たちRyoとCoryは、良質の食材にこだわった和食を専門とする2人のシェフであり、また生涯の友人でもあります。
-    厳選された季節メニューの他、日替わりの遊び心や、厳選された日本酒も楽しめます。お会いできること楽しみにしています！",
+    厳選された季節メニューの他、日替わりの遊び心や、厳選された日本酒を楽しめます。ご来店お待ちしています！",
   address: "カリフォルニア州 サンフランシスコ 1040 Polk St. at Post",
   link: "http://www.kumasf.com/"
 )

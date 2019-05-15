@@ -36,10 +36,15 @@ class Item < ApplicationRecord
   # 検索機能
     def self.search(search)
       if search
+        # 銘柄名 (部分一致)
         item_result = Item.where("name LIKE ? ", "%#{search}%")
+        # 紹介文 (部分一致)
         item_intro_result = Item.where("introduction LIKE ? ", "%#{search}%")
+        # タグ (部分一致)
         tag_result = Item.joins(:tags).where("tag_name LIKE ?", "%#{search}%")
+        # 取り扱い店舗名 (部分一致)
         store_result = Item.joins(:stores).where("store_name LIKE ?", "%#{search}%")
+        # 住所 (部分一致/住所の一部で検索できる。例：渋谷、銀座)
         store_address_result = Item.joins(:stores).where("address LIKE ?", "%#{search}%")
         # 和集合（いずれの結果も含める）
         result = item_result | item_intro_result | tag_result | store_result | store_address_result
