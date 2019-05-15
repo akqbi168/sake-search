@@ -75,7 +75,7 @@ items = Item.create!([{
 }])
 
 # Tag を作成しつつ、Item と Tag の中間テーブルを埋める
-tag = Tag.new(tag_name: "甘め")
+tag = Tag.new(tag_name: "やや甘口")
 tag.items = [items[0], items[2], items[5]]
 tag.save
 
@@ -83,7 +83,7 @@ tag = Tag.new(tag_name: "甘口")
 tag.items = [items[5]]
 tag.save
 
-tag = Tag.new(tag_name: "辛め")
+tag = Tag.new(tag_name: "やや辛口")
 tag.items = [items[1], items[3], items[4]]
 tag.save
 
